@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Obscura"
-run/main_scene="uid://cngov2qsl5xf3"
+run/main_scene="res://scene_1.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
