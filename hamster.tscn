@@ -256,4 +256,4 @@ shape = SubResource("RectangleShape2D_fvx2o")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_kk14w")
-frame_progress = 0.873391
+frame_progress = 0.146677
