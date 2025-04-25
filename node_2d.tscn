@@ -47,7 +47,7 @@ script = SubResource("GDScript_y32ns")
 position = Vector2(90, 63)
 shape = SubResource("CircleShape2D_0e48y")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(5.5, 0)
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-335.5, -179)
 scale = Vector2(1.03274, 1)
 texture = ExtResource("1_wtcfe")
