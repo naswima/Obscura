@@ -1,5 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://iawk7ti8rkx8"]
+[gd_scene load_steps=39 format=3 uid="uid://iawk7ti8rkx8"]
 
+[ext_resource type="Script" uid="uid://c75sddbhn1h4u" path="res://hamster.gd" id="1_otlhq"]
 [ext_resource type="Texture2D" uid="uid://buu00wfosoadm" path="res://Hamster!!/MR Cookies_Attack01_48x48.png" id="1_tj1d0"]
 [ext_resource type="Texture2D" uid="uid://dgiax3hhyoia7" path="res://Hamster!!/MR Cookies_Hit_48x48.png" id="2_otlhq"]
 [ext_resource type="Texture2D" uid="uid://cmd0ir8nj4e3q" path="res://Hamster!!/MR Cookies_Idle_48x48.png" id="3_fnkj0"]
@@ -246,14 +247,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="hamster" type="Node2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_otlhq")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 12)
 shape = SubResource("RectangleShape2D_fvx2o")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kk14w")
-frame_progress = 0.146677
+animation = &"damage"
+frame_progress = 0.606662
+
+[node name="hamster" type="Node2D" parent="."]

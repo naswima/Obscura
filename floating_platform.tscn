@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3dicy6al5dih"]
+
+[ext_resource type="Texture2D" uid="uid://b0lyjdl130o13" path="res://Free/Traps/Falling Platforms/Off.png" id="1_atcpt"]
+
+[node name="floating platform" type="Node2D"]
+
+[node name="Off" type="Sprite2D" parent="."]
+position = Vector2(-0.999998, 18)
+scale = Vector2(2.90625, 4)
+texture = ExtResource("1_atcpt")
