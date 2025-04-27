@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwqdrta1u05r5"]
+
+[ext_resource type="Texture2D" uid="uid://yhkagy7bbjt1" path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" id="1_jwv3a"]
+[ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
+
+[node name="Idle(32x32)" type="Sprite2D"]
+position = Vector2(208, 38)
+texture = ExtResource("1_jwv3a")
+
+[node name="Brown" type="Sprite2D" parent="."]
+position = Vector2(-64, 91)
+texture = ExtResource("2_dopym")
