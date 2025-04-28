@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dwqdrta1u05r5"]
+[gd_scene load_steps=9 format=4 uid="uid://dwqdrta1u05r5"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -278,6 +278,9 @@ terrain_set_1/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_dopym")
 sources/1 = SubResource("TileSetAtlasSource_v38iq")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v38iq"]
+radius = 11.0
+
 [node name="level 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
@@ -296,3 +299,7 @@ tile_set = SubResource("TileSet_ootpb")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
 position = Vector2(11, 498)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mr_ frog"]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_v38iq")
