@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://camb66ytn8f48" path="res://Free/Traps/Spiked Ball/Chain.png" id="5_mjd5i"]
 [ext_resource type="Texture2D" uid="uid://phx0tda2djso" path="res://Free/Traps/Spiked Ball/Spiked Ball.png" id="6_05u5g"]
 [ext_resource type="Texture2D" uid="uid://ds05dsn0gjxc3" path="res://Free/Traps/Fire/On (16x32).png" id="7_t0rxu"]
-[ext_resource type="PackedScene" uid="uid://iawk7ti8rkx8" path="res://hamster.tscn" id="11_2fno3"]
+[ext_resource type="PackedScene" uid="uid://iawk7ti8rkx8" path="res://mr.frog.tscn" id="11_2fno3"]
 [ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="15_bsdb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xosi"]
