@@ -1,10 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://ftx4misg8ym4"]
+[gd_scene load_steps=5 format=3 uid="uid://ftx4misg8ym4"]
 
 [ext_resource type="Texture2D" uid="uid://c67y5no61k8yk" path="res://How to Play.jpeg" id="1_1s7vn"]
+[ext_resource type="Script" uid="uid://i3y2xmag3koj" path="res://how_to_play.gd" id="1_enlph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enlph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_js1n7"]
+bg_color = Color(0.941176, 0.541176, 0.592157, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.404511, 0.404511, 0.404511, 0.6)
+shadow_size = 15
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_enlph")
 
 [node name="HowToPlay" type="Sprite2D" parent="."]
-position = Vector2(574.688, 328.5)
+position = Vector2(559, 321)
 scale = Vector2(0.813738, 0.703483)
 texture = ExtResource("1_1s7vn")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 451.0
+offset_right = 721.0
+offset_bottom = 563.0
+theme_override_colors/font_disabled_color = Color(0.830335, 0.830335, 0.830335, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.283018, 0.283018, 0.283018, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_enlph")
+theme_override_styles/normal = SubResource("StyleBoxFlat_js1n7")
+text = "Back to Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
