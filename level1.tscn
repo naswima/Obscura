@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://dwqdrta1u05r5"]
+[gd_scene load_steps=12 format=4 uid="uid://dwqdrta1u05r5"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_ootpb"]
+[ext_resource type="PackedScene" uid="uid://iawk7ti8rkx8" path="res://mr.frog.tscn" id="4_v38iq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
 texture = ExtResource("2_ootpb")
@@ -295,7 +296,7 @@ b = Vector2(-11, 4)
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(816, -36)
+position = Vector2(807, -37)
 scale = Vector2(1.61419, 1.40666)
 texture = ExtResource("2_dopym")
 region_enabled = true
@@ -325,6 +326,9 @@ shape = SubResource("SegmentShape2D_v38iq")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
 
-[node name="mr_ frog#CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(459, 526)
+[node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
+position = Vector2(218, 483)
+
+[node name="mr_ frog#CollisionShape2D2" type="CollisionShape2D" parent="mr_ frog"]
+position = Vector2(241, 43)
 shape = SubResource("SegmentShape2D_ootpb")
