@@ -1,28 +1,40 @@
 extends CharacterBody2D
 
-# Adjustable parameters
-@export var speed: float = 200.0
-@export var jump_velocity: float = -500.0
-@export var gravity: float = 1200.0
+@export var move_speed: float = 200
+@export var jump_force: float = 400
+@export var gravity: float = 900
+
+@onready var animated_sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
-	var direction = 0.0
-	
-	# Move left/right
-	if Input.is_action_pressed("ui_left"):
-		direction -= 1
-	if Input.is_action_pressed("ui_right"):
-		direction += 1
-
-	velocity.x = direction * speed
+	var input_dir = get_player_input()
 
 	# Apply gravity
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	else:
-		# Jump if on ground and jump pressed
-		if Input.is_action_just_pressed("ui_accept"):
-			velocity.y = jump_velocity
+	velocity.y += gravity * delta
+	
+	# Handle left/right movement
+	velocity.x = input_dir.x * move_speed
 
-	# Move the character
+	# Handle jump
+	if is_on_floor() and Input.is_action_just_pressed("jump"):
+		velocity.y = -jump_force
+
 	move_and_slide()
+
+	update_animation(input_dir)
+
+func get_player_input() -> Vector2:
+	var input = Vector2.ZERO
+	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
+	return input.normalized()
+
+func update_animation(input_dir: Vector2):
+	if not is_on_floor():
+		animated_sprite.play("jump")
+	elif input_dir.length() > 0:
+		animated_sprite.play("walk")
+		
+		if input_dir.x != 0:
+			animated_sprite.flip_h = input_dir.x < 0
+	else:
+		animated_sprite.play("idle")

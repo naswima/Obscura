@@ -398,4 +398,4 @@ position = Vector2(1432.5, 584.5)
 shape = SubResource("RectangleShape2D_xy4tn")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
-position = Vector2(12, 492)
+position = Vector2(12, 490)
