@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=21 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -317,7 +317,13 @@ a = Vector2(78, 10)
 b = Vector2(0, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crycw"]
-size = Vector2(853, 14)
+size = Vector2(1011, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2041"]
+size = Vector2(80, 238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy4tn"]
+size = Vector2(175, 143)
 
 [node name="level 1" type="Node2D"]
 
@@ -383,5 +389,13 @@ position = Vector2(914, 345)
 shape = SubResource("SegmentShape2D_mx85b")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(761.5, 648)
+position = Vector2(840.5, 648)
 shape = SubResource("RectangleShape2D_crycw")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(1560, 536)
+shape = SubResource("RectangleShape2D_i2041")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(1432.5, 584.5)
+shape = SubResource("RectangleShape2D_xy4tn")
