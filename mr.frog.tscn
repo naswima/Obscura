@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://iawk7ti8rkx8"]
+[gd_scene load_steps=50 format=3 uid="uid://oaltcldt7tcl"]
 
 [ext_resource type="Script" uid="uid://c75sddbhn1h4u" path="res://hamster.gd" id="1_otlhq"]
 [ext_resource type="Texture2D" uid="uid://blkhbcfsus0hg" path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" id="2_otlhq"]
