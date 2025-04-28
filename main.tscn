@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://cngov2qsl5xf3"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_272bh"]
+[ext_resource type="Script" uid="uid://cu4nii1awd1j0" path="res://main.gd" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://t7r53cds76vb" path="res://Free/Background/Purple.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dmcew0a0l08vh" path="res://pink-cloud-background-in-pixel-art-style-vector.jpg" id="3_h2yge"]
