@@ -22,4 +22,12 @@ func _on_button_2_pressed() -> void:
 func respawn():
 	get_tree().reload_current_scene()
 	
+func process(delta):
+	var animation_player
+	if Input.is_action_pressed: ("ui_right")
+	animation_player.play("running")
+	if Input.is_action_pressed: ("ui_left")
+	animation_player.play("running")
+	
+	
 	
