@@ -289,7 +289,7 @@ size = Vector2(260, 142)
 size = Vector2(79, 79.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crycw"]
-size = Vector2(727, 20)
+size = Vector2(1007.5, 20)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v38iq"]
 radius = 11.0
@@ -327,7 +327,7 @@ position = Vector2(376, 565)
 shape = SubResource("SegmentShape2D_v38iq")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(979, 646)
+position = Vector2(838.75, 646)
 shape = SubResource("RectangleShape2D_crycw")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
