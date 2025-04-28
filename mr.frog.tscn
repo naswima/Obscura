@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://oaltcldt7tcl"]
+[gd_scene load_steps=51 format=3 uid="uid://oaltcldt7tcl"]
 
 [ext_resource type="Script" uid="uid://c75sddbhn1h4u" path="res://hamster.gd" id="1_otlhq"]
 [ext_resource type="Texture2D" uid="uid://blkhbcfsus0hg" path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" id="2_otlhq"]
@@ -325,6 +325,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_1crcc"]
+
 [node name="mr_ frog" type="CharacterBody2D"]
 script = ExtResource("1_otlhq")
 
@@ -336,6 +338,10 @@ shape = SubResource("RectangleShape2D_fvx2o")
 position = Vector2(0, 4)
 scale = Vector2(1, 1.0625)
 sprite_frames = SubResource("SpriteFrames_kk14w")
-frame_progress = 0.840464
+frame_progress = 0.383424
 
 [node name="hamster" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1crcc")
+speed_scale = 1.5

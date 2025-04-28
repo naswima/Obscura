@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=22 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -278,6 +278,8 @@ terrain_set_1/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_dopym")
 sources/1 = SubResource("TileSetAtlasSource_v38iq")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_v38iq"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v38iq"]
 size = Vector2(260, 142)
 
@@ -341,6 +343,10 @@ tile_set = SubResource("TileSet_ootpb")
 
 [node name="mr_ frog" parent="TileMapLayer" instance=ExtResource("4_v38iq")]
 position = Vector2(11, 492)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TileMapLayer/mr_ frog"]
+sprite_frames = SubResource("SpriteFrames_v38iq")
+speed_scale = 1.5
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer"]
 
