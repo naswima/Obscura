@@ -338,10 +338,12 @@ shape = SubResource("RectangleShape2D_fvx2o")
 position = Vector2(0, 4)
 scale = Vector2(1, 1.0625)
 sprite_frames = SubResource("SpriteFrames_kk14w")
-frame_progress = 0.383424
+frame_progress = 0.492477
 
-[node name="hamster" type="Node2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(0, -3.76471)
+scale = Vector2(1, 0.941176)
 sprite_frames = SubResource("SpriteFrames_1crcc")
 speed_scale = 1.5
+
+[node name="hamster" type="Node2D" parent="."]
