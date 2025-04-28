@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b376bl6k874w6"]
+
+[ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Pink" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(574.75, 315)
+scale = Vector2(1.1965, 1.07)
+texture = ExtResource("1_cxgt8")
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 1000)
