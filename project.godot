@@ -15,11 +15,6 @@ run/main_scene="res://scene_1.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[display]
-
-window/size/mode=3
-window/stretch/scale=3.5
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
