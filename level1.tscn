@@ -376,6 +376,7 @@ shape = SubResource("SegmentShape2D_5j5gb")
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
 shape = SubResource("SegmentShape2D_mx85b")
 
+<<<<<<< HEAD
 [node name="mr_ frog" parent="."]
 _import_path = NodePath("")
 unique_name_in_owner = false
@@ -388,3 +389,8 @@ auto_translate_mode = 0
 editor_description = ""
 position = Vector2(11, 498)
 script = null
+=======
+[node name="mr_ frog#CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(459, 526)
+shape = SubResource("SegmentShape2D_ootpb")
+>>>>>>> aa1e122805ce1d1553fe1c0617ee33f12cada9ac
