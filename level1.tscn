@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://dwqdrta1u05r5"]
+[gd_scene load_steps=11 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_ootpb"]
-[ext_resource type="PackedScene" uid="uid://iawk7ti8rkx8" path="res://mr.frog.tscn" id="4_v38iq"]
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
