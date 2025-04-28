@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=22 format=4 uid="uid://dwqdrta1u05r5"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -344,7 +344,7 @@ tile_set = SubResource("TileSet_ootpb")
 [node name="mr_ frog" parent="TileMapLayer" instance=ExtResource("4_v38iq")]
 position = Vector2(11, 492)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TileMapLayer/mr_ frog"]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="TileMapLayer/mr_ frog"]
 sprite_frames = SubResource("SpriteFrames_v38iq")
 speed_scale = 1.5
 
