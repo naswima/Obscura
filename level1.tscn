@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dwqdrta1u05r5"]
+[gd_scene load_steps=12 format=4 uid="uid://dwqdrta1u05r5"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -278,6 +278,16 @@ terrain_set_1/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_dopym")
 sources/1 = SubResource("TileSetAtlasSource_v38iq")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v38iq"]
+size = Vector2(260, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8kj3"]
+size = Vector2(79, 79.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_v38iq"]
+a = Vector2(87, -3)
+b = Vector2(-7, -2)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v38iq"]
 radius = 11.0
 
@@ -296,6 +306,22 @@ tile_map_data = PackedByteArray("AAARAP//AAAHAAEAAAARAP7/AAAHAAEAAAARAP3/AAAHAAE
 tile_set = SubResource("TileSet_ootpb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(126, 585)
+shape = SubResource("RectangleShape2D_v38iq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(296, 617)
+shape = SubResource("RectangleShape2D_v8kj3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(376, 565)
+shape = SubResource("SegmentShape2D_v38iq")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(376, 565)
+shape = SubResource("SegmentShape2D_v38iq")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
 position = Vector2(11, 498)
