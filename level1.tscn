@@ -303,7 +303,7 @@ tile_map_data = PackedByteArray("AAARAP//AAAHAAEAAAARAP7/AAAHAAEAAAARAP3/AAAHAAE
 tile_set = SubResource("TileSet_ootpb")
 
 [node name="mr_ frog" parent="TileMapLayer" instance=ExtResource("4_v38iq")]
-position = Vector2(13, 494)
+position = Vector2(11, 498)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer"]
 
