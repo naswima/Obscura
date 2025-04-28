@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dwqdrta1u05r5"]
+[gd_scene load_steps=18 format=4 uid="uid://dwqdrta1u05r5"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -277,6 +277,8 @@ terrain_set_1/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_dopym")
 sources/1 = SubResource("TileSetAtlasSource_v38iq")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ootpb"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v38iq"]
 size = Vector2(260, 142)
 
@@ -287,15 +289,35 @@ size = Vector2(79, 79.5)
 a = Vector2(87, -3)
 b = Vector2(-7, -2)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_ootpb"]
-a = Vector2(36, 4)
-b = Vector2(-11, 4)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_v8kj3"]
+a = Vector2(45, 8)
+b = Vector2(0, 8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_crycw"]
+a = Vector2(44, 11)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_i2041"]
+a = Vector2(45, 11)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xy4tn"]
+a = Vector2(44, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_usj0q"]
+a = Vector2(44, 10)
+b = Vector2(0, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5j5gb"]
+a = Vector2(172, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mx85b"]
+a = Vector2(991, 354)
+b = Vector2(914, 354)
 
 [node name="level 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(816, -36)
+position = Vector2(1033, 87)
 scale = Vector2(1.61419, 1.40666)
 texture = ExtResource("2_dopym")
 region_enabled = true
@@ -306,6 +328,10 @@ tile_map_data = PackedByteArray("AAARAP//AAAHAAEAAAARAP7/AAAHAAEAAAARAP3/AAAHAAE
 tile_set = SubResource("TileSet_ootpb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer"]
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(722, 409)
+shape = SubResource("SegmentShape2D_ootpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
 position = Vector2(126, 585)
@@ -324,6 +350,31 @@ position = Vector2(376, 565)
 shape = SubResource("SegmentShape2D_v38iq")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(450, 522)
+shape = SubResource("SegmentShape2D_v8kj3")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(498, 488)
+shape = SubResource("SegmentShape2D_crycw")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(561, 504)
+shape = SubResource("SegmentShape2D_i2041")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(578, 456)
+shape = SubResource("SegmentShape2D_xy4tn")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(658, 457)
+shape = SubResource("SegmentShape2D_usj0q")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+position = Vector2(722, 409)
+shape = SubResource("SegmentShape2D_5j5gb")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
+shape = SubResource("SegmentShape2D_mx85b")
 
 [node name="mr_ frog" parent="."]
 _import_path = NodePath("")
@@ -337,7 +388,3 @@ auto_translate_mode = 0
 editor_description = ""
 position = Vector2(11, 498)
 script = null
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="mr_ frog"]
-position = Vector2(459, 526)
-shape = SubResource("SegmentShape2D_ootpb")
