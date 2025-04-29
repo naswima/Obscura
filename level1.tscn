@@ -453,5 +453,9 @@ shape = SubResource("RectangleShape2D_hx44q")
 position = Vector2(1139, 192)
 texture = ExtResource("6_crycw")
 
-[connection signal="area_entered" from="Area2D" to="mr_ frog" method="_on_area_2d_area_entered"]
+[node name="Marker2D" type="Marker2D" parent="Portal"]
+position = Vector2(621, 666)
+gizmo_extents = 100.1
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
