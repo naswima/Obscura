@@ -10,7 +10,8 @@ func _ready():
 
 # Called when a body (player) enters the area
 func _on_body_entered(body: Node) -> void:
-	if body.name == "MyPlayer":  # Check if the body is the player
+	if body.is_in_group("player"):
+		queue_free()
 		print(death_message)  # Print the death message (or use a UI element)
 
 		# Optional: Restart the level or reset player health (for demo purposes)

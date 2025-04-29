@@ -1,4 +1,6 @@
 extends CharacterBody2D
+func _readyy():
+	add_to_group("player")
 
 # --- Movement and Physics ---
 @export var speed: float = 200.0
