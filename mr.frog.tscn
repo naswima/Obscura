@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://oaltcldt7tcl"]
+[gd_scene load_steps=55 format=3 uid="uid://oaltcldt7tcl"]
 
 [ext_resource type="Script" uid="uid://c75sddbhn1h4u" path="res://hamster.gd" id="1_otlhq"]
 [ext_resource type="Texture2D" uid="uid://blkhbcfsus0hg" path="res://Free/Main Characters/Ninja Frog/Hit (32x32).png" id="2_otlhq"]
@@ -325,6 +325,77 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="Animation" id="Animation_p2i15"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="Animation" id="Animation_1crcc"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="Animation" id="Animation_07j7m"]
+resource_name = "jump"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"jump"]
+}
+
+[sub_resource type="Animation" id="Animation_avyda"]
+resource_name = "run"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"running"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_10v7h"]
+_data = {
+&"RESET": SubResource("Animation_p2i15"),
+&"idle": SubResource("Animation_1crcc"),
+&"jump": SubResource("Animation_07j7m"),
+&"run": SubResource("Animation_avyda")
+}
+
 [node name="mr_ frog" type="CharacterBody2D"]
 script = ExtResource("1_otlhq")
 
@@ -336,8 +407,10 @@ shape = SubResource("RectangleShape2D_1crcc")
 position = Vector2(-1.19209e-07, 6)
 scale = Vector2(0.96875, 0.96875)
 sprite_frames = SubResource("SpriteFrames_1crcc")
-frame_progress = 0.832776
 speed_scale = 1.5
 
-[node name="idle" type="AnimationPlayer" parent="."]
+[node name="animation" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
+libraries = {
+&"": SubResource("AnimationLibrary_10v7h")
+}
