@@ -331,7 +331,7 @@ size = Vector2(193.5, 336)
 size = Vector2(264.25, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5gb"]
-size = Vector2(31, 658)
+size = Vector2(31, 679)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx85b"]
 size = Vector2(574.5, 21.5)
@@ -343,7 +343,7 @@ size = Vector2(20, 50)
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(574.453, 176.5)
+position = Vector2(575.453, 176.5)
 scale = Vector2(1.15509, 0.981)
 texture = ExtResource("2_dopym")
 region_enabled = true
@@ -420,7 +420,7 @@ position = Vector2(1151, 215)
 shape = SubResource("RectangleShape2D_5j5gb")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(-1.5, 305)
+position = Vector2(-0.5, 315.5)
 shape = SubResource("RectangleShape2D_5j5gb")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
