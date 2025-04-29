@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=40 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -9,11 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="7_i2041"]
 [ext_resource type="Texture2D" uid="uid://bub24heke0qb6" path="res://be.png" id="8_usj0q"]
 [ext_resource type="Texture2D" uid="uid://cywv47htjxs0m" path="res://Free/Traps/Rock Head/Idle.png" id="8_xy4tn"]
-[ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="10_3l65w"]
 [ext_resource type="Texture2D" uid="uid://dt7emjdhi6tcu" path="res://le.png" id="10_5j5gb"]
 [ext_resource type="Texture2D" uid="uid://bspw5s070jng1" path="res://coinz.png" id="11_mx85b"]
-[ext_resource type="Texture2D" uid="uid://dik2bjtb4no5o" path="res://glitter.png" id="12_n8vhr"]
-[ext_resource type="Script" uid="uid://2685odottniu" path="res://area_2d_5.gd" id="12_rjtee"]
 [ext_resource type="AudioStream" uid="uid://ddioy7ekvqkw6" path="res://ELEVATOR (LOOP).mp3" id="14_eqrsh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
@@ -679,7 +676,6 @@ scale = Vector2(0.0767857, 0.0766476)
 texture = ExtResource("8_usj0q")
 
 [node name="Area2D3" type="Area2D" parent="."]
-script = ExtResource("10_3l65w")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2(917.25, 355)
@@ -704,7 +700,6 @@ shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Area2D5" type="Area2D" parent="."]
 position = Vector2(824.875, 402)
-script = ExtResource("12_rjtee")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D5"]
 position = Vector2(-356.875, 148)
@@ -716,34 +711,24 @@ scale = Vector2(0.0498047, 0.0488282)
 texture = ExtResource("10_5j5gb")
 
 [node name="Coinz" type="Sprite2D" parent="."]
-position = Vector2(321, 114)
-scale = Vector2(0.0141601, 0.0136719)
+position = Vector2(730, 405)
+scale = Vector2(0.00952143, 0.00878907)
 texture = ExtResource("11_mx85b")
 
 [node name="Coinz2" type="Sprite2D" parent="."]
-position = Vector2(274, 78)
-scale = Vector2(0.0145264, 0.0141602)
+position = Vector2(978, 470)
+scale = Vector2(0.00872806, 0.00805667)
 texture = ExtResource("11_mx85b")
 
 [node name="Coinz3" type="Sprite2D" parent="."]
-position = Vector2(224, 59)
-scale = Vector2(0.0140991, 0.0136108)
-texture = ExtResource("11_mx85b")
-
-[node name="Coinz4" type="Sprite2D" parent="."]
-position = Vector2(165, 78)
-scale = Vector2(0.0142822, 0.0133057)
+position = Vector2(996, 305)
+scale = Vector2(0.00802616, 0.00778197)
 texture = ExtResource("11_mx85b")
 
 [node name="Coinz5" type="Sprite2D" parent="."]
-position = Vector2(115, 116)
-scale = Vector2(0.0142822, 0.0141602)
+position = Vector2(566, 503)
+scale = Vector2(0.00811767, 0.00708013)
 texture = ExtResource("11_mx85b")
-
-[node name="Glitter" type="Sprite2D" parent="."]
-position = Vector2(695, 204)
-scale = Vector2(0.538, 0.265125)
-texture = ExtResource("12_n8vhr")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_eqrsh")
