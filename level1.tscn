@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=38 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="7_i2041"]
 [ext_resource type="Texture2D" uid="uid://bub24heke0qb6" path="res://be.png" id="8_usj0q"]
 [ext_resource type="Texture2D" uid="uid://cywv47htjxs0m" path="res://Free/Traps/Rock Head/Idle.png" id="8_xy4tn"]
+[ext_resource type="Texture2D" uid="uid://dt7emjdhi6tcu" path="res://le.png" id="10_5j5gb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
 texture = ExtResource("2_ootpb")
@@ -514,7 +515,7 @@ sources/0 = SubResource("TileSetAtlasSource_usj0q")
 sources/1 = SubResource("TileSetAtlasSource_5j5gb")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrsh"]
-size = Vector2(23, 26.25)
+size = Vector2(22.25, 26.25)
 
 [node name="level 1" type="Node2D"]
 
@@ -675,13 +676,41 @@ texture = ExtResource("8_usj0q")
 [node name="Area2D3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(916, 355)
+position = Vector2(917.25, 355)
 shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Be" type="Sprite2D" parent="Area2D3"]
 position = Vector2(917.25, 354.625)
 scale = Vector2(0.0767853, 0.0723497)
 texture = ExtResource("8_usj0q")
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(917.25, 355)
+scale = Vector2(1, 1)
+
+[node name="Le" type="Sprite2D" parent="Area2D4"]
+position = Vector2(-93.25, 46.0001)
+scale = Vector2(0.053711, 0.0566407)
+texture = ExtResource("10_5j5gb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(-92.375, 47)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2(824.875, 402)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2(-356.875, 148)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="Le2" type="Sprite2D" parent="Area2D5"]
+position = Vector2(-358.875, 149)
+scale = Vector2(0.0498047, 0.0488282)
+texture = ExtResource("10_5j5gb")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
