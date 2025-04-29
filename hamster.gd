@@ -1,3 +1,5 @@
+# Player.gd
+class_name frog
 extends CharacterBody2D
 
 # Adjustable parameters

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=31 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="5_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
+[ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="7_xy4tn"]
+[ext_resource type="Texture2D" uid="uid://bub24heke0qb6" path="res://be.png" id="8_usj0q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
 texture = ExtResource("2_ootpb")
@@ -333,17 +335,23 @@ size = Vector2(264.25, 156)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5gb"]
 size = Vector2(31, 679)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrsh"]
+size = Vector2(21, 27)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx85b"]
 size = Vector2(801.5, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hx44q"]
 size = Vector2(20, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8vhr"]
+size = Vector2(178, 242.667)
+
 [node name="level 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(575.453, 176.5)
+position = Vector2(565, 165)
 scale = Vector2(1.15509, 0.981)
 texture = ExtResource("2_dopym")
 region_enabled = true
@@ -360,7 +368,7 @@ position = Vector2(126, 585)
 shape = SubResource("RectangleShape2D_v38iq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(296, 617)
+position = Vector2(296, 616)
 shape = SubResource("RectangleShape2D_v8kj3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
@@ -436,6 +444,10 @@ limit_bottom = 643
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mr_ frog"]
+position = Vector2(0.5, 9.5)
+shape = SubResource("RectangleShape2D_eqrsh")
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_v8kj3")
 
@@ -456,6 +468,19 @@ texture = ExtResource("6_crycw")
 [node name="Marker2D" type="Marker2D" parent="Portal"]
 position = Vector2(621, 666)
 gizmo_extents = 100.1
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource("7_xy4tn")
+
+[node name="Be" type="Sprite2D" parent="Area2D2"]
+position = Vector2(470, 515)
+scale = Vector2(0.055357, 0.0594556)
+texture = ExtResource("8_usj0q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(470, 515)
+scale = Vector2(0.0892857, 0.0902579)
+shape = SubResource("RectangleShape2D_n8vhr")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
