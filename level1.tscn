@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=42 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bspw5s070jng1" path="res://coinz.png" id="11_mx85b"]
 [ext_resource type="Texture2D" uid="uid://dik2bjtb4no5o" path="res://glitter.png" id="12_n8vhr"]
 [ext_resource type="Texture2D" uid="uid://orpilkbjeq48" path="res://game.png" id="13_eqrsh"]
+[ext_resource type="AudioStream" uid="uid://ddioy7ekvqkw6" path="res://ELEVATOR (LOOP).mp3" id="14_eqrsh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
 texture = ExtResource("2_ootpb")
@@ -745,6 +746,9 @@ texture = ExtResource("12_n8vhr")
 position = Vector2(193, 375)
 scale = Vector2(0.802222, 0.686667)
 texture = ExtResource("13_eqrsh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_eqrsh")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]

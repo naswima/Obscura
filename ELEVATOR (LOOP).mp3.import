@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddioy7ekvqkw6"
+path="res://.godot/imported/ELEVATOR (LOOP).mp3-2defdb1fd01bbc637e60fc1c7204f6c6.mp3str"
+
+[deps]
+
+source_file="res://ELEVATOR (LOOP).mp3"
+dest_files=["res://.godot/imported/ELEVATOR (LOOP).mp3-2defdb1fd01bbc637e60fc1c7204f6c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
