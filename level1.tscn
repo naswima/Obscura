@@ -539,7 +539,7 @@ size = Vector2(22.25, 24.125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1idop"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beq0j"]
-size = Vector2(20, 19)
+size = Vector2(19, 19)
 
 [node name="level 1" type="Node2D"]
 script = ExtResource("1_eqrsh")
@@ -563,7 +563,7 @@ tile_set = SubResource("TileSet_ootpb")
 position = Vector2(31, 489)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
-position = Vector2(285, 68)
+position = Vector2(288, 73)
 shape = SubResource("CapsuleShape2D_n8vhr")
 
 [node name="mr_ frog" parent="." groups=["player"] instance=ExtResource("4_v38iq")]
@@ -649,6 +649,7 @@ scale = Vector2(0.0498047, 0.0488282)
 texture = ExtResource("10_5j5gb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2(177, -96)
 shape = SubResource("RectangleShape2D_nauge")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -694,7 +695,7 @@ texture = ExtResource("11_mx85b")
 position = Vector2(732, 409)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9" groups=["Pickups"]]
-position = Vector2(265, -101)
+position = Vector2(-162, 94)
 shape = SubResource("RectangleShape2D_beq0j")
 
 [node name="Coinz5" type="Sprite2D" parent="Area2D9" groups=["Pickups"]]
