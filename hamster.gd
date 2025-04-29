@@ -1,3 +1,5 @@
+# Player.gd
+class_name frog
 extends CharacterBody2D
 
 @export var speed: float = 200.0

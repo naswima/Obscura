@@ -30,6 +30,5 @@ func process(delta):
 	if Input.is_action_pressed: ("ui_left")
 	animation_player.play("running")
 
-
 var player_health = 100
 var player

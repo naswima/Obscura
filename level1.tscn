@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=37 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="5_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
 [ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="7_i2041"]
+[ext_resource type="Texture2D" uid="uid://bub24heke0qb6" path="res://be.png" id="8_usj0q"]
 [ext_resource type="Texture2D" uid="uid://cywv47htjxs0m" path="res://Free/Traps/Rock Head/Idle.png" id="8_xy4tn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
@@ -335,6 +336,9 @@ size = Vector2(264.25, 156)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5gb"]
 size = Vector2(31, 679)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8vhr"]
+size = Vector2(20, 24)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx85b"]
 size = Vector2(801.5, 21.5)
 
@@ -509,6 +513,9 @@ margins = Vector2i(0, 1)
 sources/0 = SubResource("TileSetAtlasSource_usj0q")
 sources/1 = SubResource("TileSetAtlasSource_5j5gb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrsh"]
+size = Vector2(23, 26.25)
+
 [node name="level 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
@@ -526,7 +533,7 @@ tile_set = SubResource("TileSet_ootpb")
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(126, 585)
+position = Vector2(127, 585)
 shape = SubResource("RectangleShape2D_v38iq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
@@ -578,7 +585,7 @@ position = Vector2(1032.25, 408)
 shape = SubResource("RectangleShape2D_usj0q")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(1104.25, 396)
+position = Vector2(1092, 393)
 shape = SubResource("RectangleShape2D_i2041")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
@@ -606,6 +613,10 @@ limit_right = 1152
 limit_bottom = 643
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mr_ frog"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_n8vhr")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_v8kj3")
@@ -649,6 +660,28 @@ shape = SubResource("CapsuleShape2D_usj0q")
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAgAAQAAQAOAAEAAAAhAAQAAQAPAAAAAAAiAAQAAQANAAEAAAAzAAAAAQAMAAAAAAA0AAAAAQANAAAAAAA1AAAAAQANAAAAAAA2AAAAAQAOAAAAAAAhAAYAAQAPAAIAAAAhAAUAAQAPAAEAAAAiAAUAAQANAAIAAAAgAAUAAQAOAAIAAAAfAAQAAQANAAEAAAAfAAUAAQANAAIAAAAjAAQAAQAOAAEAAAAjAAUAAQAOAAIAAAA=")
 tile_set = SubResource("TileSet_mx85b")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(598.5, 449.125)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="Be" type="Sprite2D" parent="Area2D2"]
+position = Vector2(598.25, 447.375)
+scale = Vector2(0.0767857, 0.0766476)
+texture = ExtResource("8_usj0q")
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(916, 355)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="Be" type="Sprite2D" parent="Area2D3"]
+position = Vector2(917.25, 354.625)
+scale = Vector2(0.0767853, 0.0723497)
+texture = ExtResource("8_usj0q")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
