@@ -329,7 +329,7 @@ size = Vector2(193.5, 336)
 size = Vector2(264.25, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5gb"]
-size = Vector2(20, 440)
+size = Vector2(31, 658)
 
 [node name="level 1" type="Node2D"]
 
@@ -412,7 +412,7 @@ position = Vector2(1151, 215)
 shape = SubResource("RectangleShape2D_5j5gb")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(4, 414)
+position = Vector2(-1.5, 305)
 shape = SubResource("RectangleShape2D_5j5gb")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
