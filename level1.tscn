@@ -672,5 +672,16 @@ position = Vector2(598.25, 447.375)
 scale = Vector2(0.0767857, 0.0766476)
 texture = ExtResource("8_usj0q")
 
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(916, 355)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="Be" type="Sprite2D" parent="Area2D3"]
+position = Vector2(917.25, 354.625)
+scale = Vector2(0.0767853, 0.0723497)
+texture = ExtResource("8_usj0q")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
