@@ -41,3 +41,7 @@ func update_animation(direction: float):
 	else:
 		# Play idle animation when no input
 		animated_sprite.play("idle")
+		
+func _on_portal_body_entered(body: Node2D) -> void:
+	if body == self:
+		get_tree().change_scene_to_file("res://level 2.tscn")
