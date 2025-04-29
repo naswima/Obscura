@@ -585,6 +585,7 @@ position = Vector2(-0.5, 315.5)
 shape = SubResource("RectangleShape2D_5j5gb")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
+process_mode = 3
 position = Vector2(31, 489)
 
 [node name="Camera2D" type="Camera2D" parent="mr_ frog"]
