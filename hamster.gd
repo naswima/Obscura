@@ -11,7 +11,6 @@ var health: int = 100
 
 # --- Nodes ---
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var attack_area = $AttackArea
 
 func _ready():
 	# Connect animation finished signal
@@ -32,10 +31,6 @@ func _physics_process(delta):
 		# Jump
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = jump_velocity
-
-		# Attack
-		if Input.is_action_just_pressed("ui_select") and is_on_floor():
-			attack()
 
 	# --- Gravity ---
 	if not is_on_floor():
@@ -59,25 +54,6 @@ func update_animation(direction: Vector2) -> void:
 	else:
 		animated_sprite.play("default")
 
-func attack():
-	is_attacking = true
-	animated_sprite.play("attack")
-
-	var bodies = attack_area.get_overlapping_bodies()
-	for body in bodies:
-		if body.is_in_group("skeletons") and body.has_method("take_damage"):
-			body.take_damage()
-
-func _on_animation_finished():
-	if animated_sprite.animation == "attack":
-		is_attacking = false
-
-func take_damage():
-	health -= 10
-	print("Player health: %d" % health)
-	if health <= 0:
-		animated_sprite.play("death")
-		print("Player is dead")
 
 func _on_portal_body_entered(body: Node2D) -> void:
 	if body == self:
