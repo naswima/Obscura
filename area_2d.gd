@@ -10,7 +10,7 @@ func _ready():
 
 # Called when a body (player) enters the area
 func _on_body_entered(body: Node) -> void:
-	if body.name == "Player":  # Check if the body is the player
+	if body.name == "frog":  # Check if the body is the player
 		print(death_message)  # Print the death message (or use a UI element)
 
 		# Optional: Restart the level or reset player health (for demo purposes)
