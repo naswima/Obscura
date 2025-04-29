@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cngov2qsl5xf3"]
+[gd_scene load_steps=15 format=4 uid="uid://cngov2qsl5xf3"]
 
 [ext_resource type="Script" uid="uid://cu4nii1awd1j0" path="res://main.gd" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://t7r53cds76vb" path="res://Free/Background/Purple.png" id="1_ig7tw"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="4_7mycd"]
 [ext_resource type="Texture2D" uid="uid://cnahx4tk54u05" path="res://Free/Main Characters/Ninja Frog/Fall (32x32).png" id="5_272bh"]
 [ext_resource type="Texture2D" uid="uid://p7wo8bep4m0y" path="res://Free/Main Characters/Ninja Frog/Jump (32x32).png" id="6_5vw27"]
+[ext_resource type="AudioStream" uid="uid://ddioy7ekvqkw6" path="res://ELEVATOR (LOOP).mp3" id="8_5vw27"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -464,6 +465,12 @@ texture = ExtResource("5_272bh")
 position = Vector2(848, 128)
 scale = Vector2(2.11719, 2.10937)
 texture = ExtResource("6_5vw27")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5vw27")
+volume_db = 0.459
+pitch_scale = 1.29
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

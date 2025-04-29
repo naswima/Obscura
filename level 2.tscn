@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=22 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_gvk67"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_hmp44"]
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_hmp44"]
+[ext_resource type="AudioStream" uid="uid://crbo62twkasao" path="res://Kashido - Swan Lake Theme.mp3" id="5_cqxf2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfy05"]
 texture = ExtResource("2_gvk67")
@@ -464,3 +465,9 @@ limit_bottom = 643
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D/mr_ frog"]
 position = Vector2(0, 8)
 shape = SubResource("CapsuleShape2D_cqxf2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cqxf2")
+volume_db = 0.459
+pitch_scale = 1.29
+autoplay = true

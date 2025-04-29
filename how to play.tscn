@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ftx4misg8ym4"]
+[gd_scene load_steps=6 format=3 uid="uid://ftx4misg8ym4"]
 
 [ext_resource type="Texture2D" uid="uid://c67y5no61k8yk" path="res://How to Play.jpeg" id="1_1s7vn"]
 [ext_resource type="Script" uid="uid://i3y2xmag3koj" path="res://how_to_play.gd" id="1_enlph"]
+[ext_resource type="AudioStream" uid="uid://ddioy7ekvqkw6" path="res://ELEVATOR (LOOP).mp3" id="3_js1n7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enlph"]
 
@@ -36,5 +37,11 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_enlph")
 theme_override_styles/normal = SubResource("StyleBoxFlat_js1n7")
 text = "Back to Main Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_js1n7")
+volume_db = 0.459
+pitch_scale = 1.29
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
