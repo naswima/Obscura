@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=30 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Script" uid="uid://bgiwb86j4opch" path="res://level_1.gd" id="1_eqrsh"]
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="5_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
+[ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_3l65w"]
 [ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="7_i2041"]
 [ext_resource type="Texture2D" uid="uid://bub24heke0qb6" path="res://be.png" id="8_usj0q"]
 [ext_resource type="Texture2D" uid="uid://cywv47htjxs0m" path="res://Free/Traps/Rock Head/Idle.png" id="8_xy4tn"]
@@ -570,13 +571,14 @@ position = Vector2(31, 489)
 
 [node name="Camera2D" type="Camera2D" parent="mr_ frog"]
 position = Vector2(-1, -2)
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 limit_left = -2
 limit_top = -1
 limit_right = 1152
 limit_bottom = 643
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+script = ExtResource("7_3l65w")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_v8kj3")
