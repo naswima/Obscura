@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=28 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="5_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
+[ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="7_i2041"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
 texture = ExtResource("2_ootpb")
@@ -456,6 +457,12 @@ texture = ExtResource("6_crycw")
 [node name="Marker2D" type="Marker2D" parent="Portal"]
 position = Vector2(621, 666)
 gizmo_extents = 100.1
+
+[node name="spike" parent="." instance=ExtResource("7_i2041")]
+position = Vector2(850, 12)
+
+[node name="spike2" parent="." instance=ExtResource("7_i2041")]
+position = Vector2(537, 82)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
