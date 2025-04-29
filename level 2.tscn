@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=21 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_gvk67"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_hmp44"]
+[ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_hmp44"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfy05"]
 texture = ExtResource("2_gvk67")
@@ -309,7 +310,7 @@ size = Vector2(96.5, 79.5)
 size = Vector2(1012, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdads"]
-size = Vector2(94.75, 183)
+size = Vector2(94.75, 185)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g8n8q"]
 size = Vector2(67.75, 85)
@@ -334,6 +335,9 @@ size = Vector2(107, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_26ho8"]
 size = Vector2(15, 26)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cqxf2"]
+radius = 11.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -364,7 +368,7 @@ position = Vector2(841, 644)
 shape = SubResource("RectangleShape2D_b4b6e")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(63.625, 510.5)
+position = Vector2(63.625, 509.5)
 shape = SubResource("RectangleShape2D_sdads")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
@@ -446,3 +450,17 @@ shape = SubResource("RectangleShape2D_26ho8")
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
 position = Vector2(584, 387)
 shape = SubResource("RectangleShape2D_26ho8")
+
+[node name="mr_ frog" parent="TileMapLayer/StaticBody2D" instance=ExtResource("4_hmp44")]
+position = Vector2(29, 394)
+
+[node name="Camera2D" type="Camera2D" parent="TileMapLayer/StaticBody2D/mr_ frog"]
+zoom = Vector2(3, 3)
+limit_left = -2
+limit_top = -1
+limit_right = 1152
+limit_bottom = 643
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D/mr_ frog"]
+position = Vector2(0, 8)
+shape = SubResource("CapsuleShape2D_cqxf2")
