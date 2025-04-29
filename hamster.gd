@@ -1,47 +1,42 @@
 extends CharacterBody2D
 
-# Adjustable parameters
 @export var speed: float = 200.0
 @export var jump_velocity: float = -500.0
 @export var gravity: float = 1200.0
 
-@onready var animated_sprite = $AnimatedSprite2D  # Reference to the AnimatedSprite2D node
+@onready var animated_sprite = $AnimatedSprite2D
 
-func _physics_process(delta):
-	var direction = 0.0
-	
-	# Get horizontal input
-	if Input.is_action_pressed("ui_left"):
-		direction -= 1.0
+func _physics_process(delta: float) -> void:
+	var direction := Vector2.ZERO
+
+	# Handle horizontal input
 	if Input.is_action_pressed("ui_right"):
-		direction += 1.0
+		direction.x += 1
+		animated_sprite.flip_h = false
+	elif Input.is_action_pressed("ui_left"):
+		direction.x -= 1
+		animated_sprite.flip_h = true
 
-	# Apply horizontal velocity
-	velocity.x = direction * speed
+	# Handle jumping (ONLY if on floor)
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = jump_velocity
 
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
-		# Jump if on ground and jump pressed
-		if Input.is_action_just_pressed("ui_accept"):
-			velocity.y = jump_velocity
+		velocity.y = 0.0
 
-	# Move the character
+	# Horizontal velocity
+	velocity.x = direction.x * speed
+
+	# Move and slide
 	move_and_slide()
 
-	# Update animation based on movement
-	update_animation(direction)
+	# Play default animation
+	if not animated_sprite.is_playing():
+		animated_sprite.play("default")
 
-func update_animation(direction: float):
-	if not is_zero_approx(direction):
-		print("Playing run")
-		animated_sprite.play("run")
-		animated_sprite.flip_h = direction < 0  # flip sprite left/right
-	else:
-		print("Playing idle")
-		animated_sprite.play("idle")
-		
 func _on_portal_body_entered(body: Node2D) -> void:
 	if body == self:
 		get_tree().change_scene_to_file("res://level 2.tscn")

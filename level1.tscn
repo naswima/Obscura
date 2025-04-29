@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=36 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -327,7 +327,7 @@ size = Vector2(1012, 22)
 size = Vector2(85.5, 180)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2041"]
-size = Vector2(193.5, 336)
+size = Vector2(193.5, 339)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xy4tn"]
 size = Vector2(264.25, 156)
@@ -341,13 +341,15 @@ size = Vector2(801.5, 21.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hx44q"]
 size = Vector2(20, 50)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xy4tn"]
-radius = 18.0
-height = 378.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_xy4tn"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_usj0q"]
-radius = 18.0
-height = 360.0
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hx44q"]
+b = Vector2(0, 314)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n8vhr"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eqrsh"]
+b = Vector2(-1, 316)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_usj0q"]
 texture = ExtResource("8_xy4tn")
@@ -578,7 +580,7 @@ position = Vector2(1032.25, 408)
 shape = SubResource("RectangleShape2D_usj0q")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(1104.25, 396)
+position = Vector2(1104.25, 394.5)
 shape = SubResource("RectangleShape2D_i2041")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
@@ -635,7 +637,11 @@ position = Vector2(847, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike/StaticBody2D"]
 position = Vector2(-311, 251)
-shape = SubResource("CapsuleShape2D_xy4tn")
+shape = SubResource("CircleShape2D_xy4tn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="spike/StaticBody2D"]
+position = Vector2(-311, 95)
+shape = SubResource("SegmentShape2D_hx44q")
 
 [node name="spike2" parent="." instance=ExtResource("7_i2041")]
 position = Vector2(536, 108)
@@ -644,7 +650,11 @@ position = Vector2(536, 108)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike2/StaticBody2D"]
 position = Vector2(310, 72)
-shape = SubResource("CapsuleShape2D_usj0q")
+shape = SubResource("CircleShape2D_n8vhr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="spike2/StaticBody2D"]
+position = Vector2(311, -93)
+shape = SubResource("SegmentShape2D_eqrsh")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAgAAQAAQAOAAEAAAAhAAQAAQAPAAAAAAAiAAQAAQANAAEAAAAzAAAAAQAMAAAAAAA0AAAAAQANAAAAAAA1AAAAAQANAAAAAAA2AAAAAQAOAAAAAAAhAAYAAQAPAAIAAAAhAAUAAQAPAAEAAAAiAAUAAQANAAIAAAAgAAUAAQAOAAIAAAAfAAQAAQANAAEAAAAfAAUAAQANAAIAAAAjAAQAAQAOAAEAAAAjAAUAAQAOAAIAAAA=")

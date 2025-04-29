@@ -336,7 +336,7 @@ shape = SubResource("RectangleShape2D_1crcc")
 position = Vector2(-1.19209e-07, 6)
 scale = Vector2(0.96875, 0.96875)
 sprite_frames = SubResource("SpriteFrames_1crcc")
-frame_progress = 0.952118
+frame_progress = 0.832776
 speed_scale = 1.5
 
 [node name="idle" type="AnimationPlayer" parent="."]
