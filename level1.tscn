@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=27 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_ootpb"]
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="5_v8kj3"]
+[ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
 texture = ExtResource("2_ootpb")
@@ -335,6 +336,9 @@ size = Vector2(31, 658)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx85b"]
 size = Vector2(574.5, 21.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx44q"]
+size = Vector2(20, 50)
+
 [node name="level 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
@@ -439,4 +443,15 @@ script = ExtResource("5_v8kj3")
 position = Vector2(622.75, 638.75)
 shape = SubResource("RectangleShape2D_mx85b")
 
+[node name="Portal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+position = Vector2(1136, 201)
+shape = SubResource("RectangleShape2D_hx44q")
+
+[node name="Checkpoint" type="Sprite2D" parent="Portal"]
+position = Vector2(1139, 192)
+texture = ExtResource("6_crycw")
+
 [connection signal="area_entered" from="Area2D" to="mr_ frog" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
