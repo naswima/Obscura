@@ -15,6 +15,10 @@ run/main_scene="uid://cngov2qsl5xf3"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[global_group]
+
+player=""
+
 [input]
 
 left={

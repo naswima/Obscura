@@ -35,7 +35,7 @@ func _on_animation_finished() -> void:
 # --- Portal Interaction ---
 func _on_portal_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		get_tree().change_scene_to_file("res://level_2.tscn")
+		get_tree().change_scene_to_file("res://level 2.tscn")
 
 # --- _ready() Function ---
 func _ready():

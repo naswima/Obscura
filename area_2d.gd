@@ -3,11 +3,6 @@ extends Area2D
 @export var death_message: String = "You died!"
 @export var respawn_scene: PackedScene  # For respawn logic, if you want to load a scene again
 
-# Called when the Area2D is ready
-func _ready():
-	# Connect the signal that triggers when a body enters this area
-	body_entered.connect(_on_body_entered)
-
 # Called when a body (player) enters the area
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
