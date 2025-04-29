@@ -587,7 +587,7 @@ position = Vector2(1032.25, 408)
 shape = SubResource("RectangleShape2D_usj0q")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(1092, 393)
+position = Vector2(1104, 395)
 shape = SubResource("RectangleShape2D_i2041")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
@@ -687,7 +687,6 @@ texture = ExtResource("8_usj0q")
 
 [node name="Area2D4" type="Area2D" parent="."]
 position = Vector2(917.25, 355)
-scale = Vector2(1, 1)
 
 [node name="Le" type="Sprite2D" parent="Area2D4"]
 position = Vector2(-93.25, 46.0001)
@@ -696,16 +695,13 @@ texture = ExtResource("10_5j5gb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D4"]
 position = Vector2(-92.375, 47)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Area2D5" type="Area2D" parent="."]
 position = Vector2(824.875, 402)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D5"]
 position = Vector2(-356.875, 148)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Le2" type="Sprite2D" parent="Area2D5"]
@@ -714,7 +710,7 @@ scale = Vector2(0.0498047, 0.0488282)
 texture = ExtResource("10_5j5gb")
 
 [node name="Coinz" type="Sprite2D" parent="."]
-position = Vector2(332, 114)
+position = Vector2(321, 114)
 scale = Vector2(0.0141601, 0.0136719)
 texture = ExtResource("11_mx85b")
 
