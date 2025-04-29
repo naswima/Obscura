@@ -30,8 +30,16 @@ func process(delta):
 	if Input.is_action_pressed: ("ui_left")
 	animation_player.play("running")
 	
-func _on_player_died(): # Example function to handle death
+func _on_player_died(): 
 	if player.health: 0
-	
+
 var player_health = 100
 var player
+
+# Area2DScript
+
+func area_entered(body):
+	if body.is_in_group():
+		body._on_player_died()      
+	
+var body

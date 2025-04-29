@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://86cryv0fm214"]
+
+[ext_resource type="Texture2D" uid="uid://tcxwyhcx8fof" path="res://Free/Items/Fruits/Apple.png" id="1_yv0ho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bc4kw"]
+size = Vector2(92, 83)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(395.5, 122)
+scale = Vector2(0.983456, 1)
+texture = ExtResource("1_yv0ho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(-67, 96)
+shape = SubResource("RectangleShape2D_bc4kw")

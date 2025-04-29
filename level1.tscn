@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=25 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_ootpb"]
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
+[ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="5_v8kj3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
 texture = ExtResource("2_ootpb")
@@ -331,6 +332,9 @@ size = Vector2(264.25, 156)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5gb"]
 size = Vector2(31, 658)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx85b"]
+size = Vector2(574.5, 21.5)
+
 [node name="level 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
@@ -427,3 +431,12 @@ limit_right = 1152
 limit_bottom = 643
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_v8kj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(622.75, 638.75)
+shape = SubResource("RectangleShape2D_mx85b")
+
+[connection signal="area_entered" from="Area2D" to="mr_ frog" method="_on_area_2d_area_entered"]
