@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=44 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -340,7 +340,6 @@ size = Vector2(264.25, 156)
 size = Vector2(31, 679)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8vhr"]
-size = Vector2(20, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx85b"]
 size = Vector2(801.5, 21.5)
@@ -517,7 +516,16 @@ sources/0 = SubResource("TileSetAtlasSource_usj0q")
 sources/1 = SubResource("TileSetAtlasSource_5j5gb")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrsh"]
-size = Vector2(22.25, 26.25)
+size = Vector2(22.25, 24.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l65w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjtee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1idop"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beq0j"]
+size = Vector2(20, 19)
 
 [node name="level 1" type="Node2D"]
 
@@ -618,7 +626,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="mr_ frog"]
-position = Vector2(0, 9)
+position = Vector2(538, 16)
 shape = SubResource("RectangleShape2D_n8vhr")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -695,14 +703,14 @@ scale = Vector2(0.053711, 0.0566407)
 texture = ExtResource("10_5j5gb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2(-92.375, 47)
+position = Vector2(-91.25, 47)
 shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Area2D5" type="Area2D" parent="."]
-position = Vector2(824.875, 402)
+position = Vector2(820, 403)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D5"]
-position = Vector2(-356.875, 148)
+position = Vector2(-356.875, 149.063)
 shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Le2" type="Sprite2D" parent="Area2D5"]
@@ -710,28 +718,54 @@ position = Vector2(-358.875, 149)
 scale = Vector2(0.0498047, 0.0488282)
 texture = ExtResource("10_5j5gb")
 
-[node name="Coinz" type="Sprite2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_eqrsh")
+
+[node name="Area2D6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+shape = SubResource("RectangleShape2D_3l65w")
+
+[node name="Coinz" type="Sprite2D" parent="Area2D6"]
 position = Vector2(730, 405)
 scale = Vector2(0.00952143, 0.00878907)
 texture = ExtResource("11_mx85b")
 
-[node name="Coinz2" type="Sprite2D" parent="."]
-position = Vector2(978, 470)
+[node name="Area2D7" type="Area2D" parent="."]
+position = Vector2(566, 503)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+position = Vector2(411, -33)
+shape = SubResource("RectangleShape2D_rjtee")
+
+[node name="Coinz2" type="Sprite2D" parent="Area2D7"]
+position = Vector2(412, -33)
 scale = Vector2(0.00872806, 0.00805667)
 texture = ExtResource("11_mx85b")
 
-[node name="Coinz3" type="Sprite2D" parent="."]
-position = Vector2(996, 305)
+[node name="Area2D8" type="Area2D" parent="."]
+position = Vector2(977, 470)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+position = Vector2(-247, -66)
+shape = SubResource("RectangleShape2D_1idop")
+
+[node name="Coinz3" type="Sprite2D" parent="Area2D8"]
+position = Vector2(19, -165)
 scale = Vector2(0.00802616, 0.00778197)
 texture = ExtResource("11_mx85b")
 
-[node name="Coinz5" type="Sprite2D" parent="."]
-position = Vector2(566, 503)
+[node name="Area2D9" type="Area2D" parent="."]
+position = Vector2(732, 409)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9"]
+position = Vector2(265, -101)
+shape = SubResource("RectangleShape2D_beq0j")
+
+[node name="Coinz5" type="Sprite2D" parent="Area2D9"]
+position = Vector2(-164, 96)
 scale = Vector2(0.00811767, 0.00708013)
 texture = ExtResource("11_mx85b")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_eqrsh")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
