@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=30 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Script" uid="uid://bgiwb86j4opch" path="res://level_1.gd" id="1_eqrsh"]
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
@@ -530,6 +530,8 @@ sources/1 = SubResource("TileSetAtlasSource_5j5gb")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrsh"]
 size = Vector2(22.25, 24.125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nauge"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3l65w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjtee"]
@@ -646,6 +648,9 @@ position = Vector2(-503, 158)
 scale = Vector2(0.0498047, 0.0488282)
 texture = ExtResource("10_5j5gb")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+shape = SubResource("RectangleShape2D_nauge")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_eqrsh")
 volume_db = 5.508
@@ -706,3 +711,9 @@ position = Vector2(844, -2)
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_exited" from="Area2D3" to="." method="_on_area_2d_3_body_exited"]
+[connection signal="body_entered" from="Area2D4" to="." method="_on_area_2d_4_body_entered"]
+[connection signal="body_exited" from="Area2D4" to="." method="_on_area_2d_4_body_exited"]
+[connection signal="body_entered" from="Area2D5" to="." method="_on_area_2d_5_body_entered"]
+[connection signal="body_exited" from="Area2D5" to="." method="_on_area_2d_5_body_exited"]

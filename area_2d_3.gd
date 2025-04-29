@@ -1,6 +1,5 @@
 extends Area2D
 
-
 @export var item_name: String = "berry"
 signal picked_up(item_name: String)  # Ensure the signal is defined with the parameter
 
