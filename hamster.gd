@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @onready var item = $ItemNode  # Reference to the Area2D item node (make sure the path is correct)
 @onready var animated_sprite = $AnimatedSprite2D  # Reference to the animated sprite
@@ -16,6 +16,16 @@ var health: int = 100
 func _on_item_picked_up(item_name: String) -> void:
 	print("Picked up item:", item_name)
 	# Add the item to inventory or perform other logic here
+@onready var pickup_area = $PickupArea  # Reference to the Area2D
+
+func _ready():
+	#pickup_area.body_entered.connect(_on_pickup_entered)
+	pass
+
+func _on_pickup_entered(body):
+	if body.is_in_group("pickups"):
+		print("Picked up: ", body.name)
+		body.queue_free()  # This removes the pickup from the scene
 
 # --- Animation ---
 func update_animation(direction: Vector2) -> void:
@@ -38,8 +48,6 @@ func _on_portal_body_entered(body: Node2D) -> void:
 		get_tree().change_scene_to_file("res://level 2.tscn")
 
 # --- _ready() Function ---
-func _ready():
-	add_to_group("player")  # Add player to "player" group for collision detection (if needed)
 
 	# Check if the item node exists
 	if item:
@@ -78,3 +86,4 @@ func _physics_process(delta):
 
 	# --- Animation ---
 	update_animation(direction)
+	
