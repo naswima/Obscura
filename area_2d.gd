@@ -1,18 +1,14 @@
 extends Area2D
-# Optional: Export a message or death logic
-@export var death_message: String = "You died!"
-@export var respawn_scene: PackedScene  # For respawn logic, if you want to load a scene again
 
-# Called when a body (player) enters the area
-func _on_body_entered(body: Node) -> void:
+@export var spawn_point: Vector2  # Set the spawn point directly in the export variable
+
+@onready var player: Node2D = get_node("/root/Scene/Player")  # Adjust path to the player node
+
+func _ready():
+	# Connect the body_entered signal to handle collisions
+	body_entered.connect(_on_body_entered)
+
+func _on_body_entered(body: Node2D):
+	# Check if the overlapping body is in the "player" group
 	if body.is_in_group("player"):
-		queue_free()
-		print(death_message)  # Print the death message (or use a UI element)
-
-		# Optional: Restart the level or reset player health (for demo purposes)
-		if respawn_scene:
-			get_tree().change_scene_to(respawn_scene)  # Load a scene again (can be the current scene)
-		
-		# You can also stop the player, play a sound, trigger animation, etc.
-		# For example, let's stop the player movement and show a simple message:
-		# body.queue_free()  # To remove the player (forcefully "death" it)
+		body.global_position = spawn_point  # Reset the player's position to the spawn point

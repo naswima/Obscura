@@ -1,4 +1,4 @@
-class_name Player extends CharacterBody2D
+extends CharacterBody2D
 
 @onready var item = $ItemNode  # Reference to the Area2D item node (make sure the path is correct)
 @onready var animated_sprite = $AnimatedSprite2D  # Reference to the animated sprite
