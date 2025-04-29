@@ -37,9 +37,13 @@ func _physics_process(delta):
 
 func update_animation(direction: float):
 	if not is_zero_approx(direction):
-		# Play run animation and flip sprite if moving left
+		print("Playing run")
 		animated_sprite.play("run")
-		animated_sprite.flip_h = direction < 0
+		animated_sprite.flip_h = direction < 0  # flip sprite left/right
 	else:
-		# Play idle animation when no input
+		print("Playing idle")
 		animated_sprite.play("idle")
+		
+func _on_portal_body_entered(body: Node2D) -> void:
+	if body == self:
+		get_tree().change_scene_to_file("res://level 2.tscn")

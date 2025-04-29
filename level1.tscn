@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=34 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="5_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
-[ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="7_xy4tn"]
-[ext_resource type="Texture2D" uid="uid://bub24heke0qb6" path="res://be.png" id="8_usj0q"]
+[ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="7_i2041"]
+[ext_resource type="Texture2D" uid="uid://cywv47htjxs0m" path="res://Free/Traps/Rock Head/Idle.png" id="8_xy4tn"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
 texture = ExtResource("2_ootpb")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -268,7 +268,7 @@ texture = ExtResource("2_ootpb")
 19:10/0 = 0
 20:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v38iq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx85b"]
 texture = ExtResource("3_ootpb")
 0:0/0 = 0
 
@@ -279,8 +279,8 @@ terrain_set_0/terrain_0/color = Color(0.72549, 0.431373, 0.329412, 1)
 terrain_set_0/terrain_1/name = "Terrain 1"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 terrain_set_1/mode = 0
-sources/0 = SubResource("TileSetAtlasSource_dopym")
-sources/1 = SubResource("TileSetAtlasSource_v38iq")
+sources/0 = SubResource("TileSetAtlasSource_xy4tn")
+sources/1 = SubResource("TileSetAtlasSource_mx85b")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v38iq"]
 size = Vector2(260, 142)
@@ -335,23 +335,185 @@ size = Vector2(264.25, 156)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5gb"]
 size = Vector2(31, 679)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrsh"]
-size = Vector2(21, 27)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx85b"]
 size = Vector2(801.5, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hx44q"]
 size = Vector2(20, 50)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8vhr"]
-size = Vector2(178, 242.667)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xy4tn"]
+radius = 18.0
+height = 378.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_usj0q"]
+radius = 18.0
+height = 360.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_usj0q"]
+texture = ExtResource("8_xy4tn")
+margins = Vector2i(5, 5)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5j5gb"]
+texture = ExtResource("2_ootpb")
+margins = Vector2i(0, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mx85b"]
+sources/0 = SubResource("TileSetAtlasSource_usj0q")
+sources/1 = SubResource("TileSetAtlasSource_5j5gb")
 
 [node name="level 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(565, 165)
+position = Vector2(574, 163)
 scale = Vector2(1.15509, 0.981)
 texture = ExtResource("2_dopym")
 region_enabled = true
@@ -368,7 +530,7 @@ position = Vector2(126, 585)
 shape = SubResource("RectangleShape2D_v38iq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(296, 616)
+position = Vector2(296, 617)
 shape = SubResource("RectangleShape2D_v8kj3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
@@ -432,6 +594,7 @@ position = Vector2(-0.5, 315.5)
 shape = SubResource("RectangleShape2D_5j5gb")
 
 [node name="mr_ frog" parent="." instance=ExtResource("4_v38iq")]
+process_mode = 3
 position = Vector2(31, 489)
 
 [node name="Camera2D" type="Camera2D" parent="mr_ frog"]
@@ -443,10 +606,6 @@ limit_right = 1152
 limit_bottom = 643
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="mr_ frog"]
-position = Vector2(0.5, 9.5)
-shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_v8kj3")
@@ -469,18 +628,27 @@ texture = ExtResource("6_crycw")
 position = Vector2(621, 666)
 gizmo_extents = 100.1
 
-[node name="Area2D2" type="Area2D" parent="."]
-script = ExtResource("7_xy4tn")
+[node name="spike" parent="." instance=ExtResource("7_i2041")]
+position = Vector2(847, 16)
 
-[node name="Be" type="Sprite2D" parent="Area2D2"]
-position = Vector2(470, 515)
-scale = Vector2(0.055357, 0.0594556)
-texture = ExtResource("8_usj0q")
+[node name="StaticBody2D" type="StaticBody2D" parent="spike"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(470, 515)
-scale = Vector2(0.0892857, 0.0902579)
-shape = SubResource("RectangleShape2D_n8vhr")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spike/StaticBody2D"]
+position = Vector2(-311, 251)
+shape = SubResource("CapsuleShape2D_xy4tn")
+
+[node name="spike2" parent="." instance=ExtResource("7_i2041")]
+position = Vector2(536, 108)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="spike2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spike2/StaticBody2D"]
+position = Vector2(310, 72)
+shape = SubResource("CapsuleShape2D_usj0q")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAgAAQAAQAOAAEAAAAhAAQAAQAPAAAAAAAiAAQAAQANAAEAAAAzAAAAAQAMAAAAAAA0AAAAAQANAAAAAAA1AAAAAQANAAAAAAA2AAAAAQAOAAAAAAAhAAYAAQAPAAIAAAAhAAUAAQAPAAEAAAAiAAUAAQANAAIAAAAgAAUAAQAOAAIAAAAfAAQAAQANAAEAAAAfAAUAAQANAAIAAAAjAAQAAQAOAAEAAAAjAAUAAQAOAAIAAAA=")
+tile_set = SubResource("TileSet_mx85b")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Portal" to="mr_ frog" method="_on_portal_body_entered"]
