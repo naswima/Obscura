@@ -3,10 +3,6 @@ extends Area2D
 @export var item_name: String = "berry"
 signal picked_up(item_name: String)  # Ensure the signal is defined with the parameter
 
-func _ready():
-	# No need to add to group here, it should be done in the player script
-	pass
-
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):  # Check if the body is the player
 		print("Picked up:", item_name)
