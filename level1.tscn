@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://vqyp0ijm1keg" path="res://spike.tscn" id="7_i2041"]
 [ext_resource type="Texture2D" uid="uid://cywv47htjxs0m" path="res://Free/Traps/Rock Head/Idle.png" id="8_xy4tn"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
 texture = ExtResource("2_ootpb")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -268,7 +268,7 @@ texture = ExtResource("2_ootpb")
 19:10/0 = 0
 20:10/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v38iq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx85b"]
 texture = ExtResource("3_ootpb")
 0:0/0 = 0
 
@@ -279,8 +279,8 @@ terrain_set_0/terrain_0/color = Color(0.72549, 0.431373, 0.329412, 1)
 terrain_set_0/terrain_1/name = "Terrain 1"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 terrain_set_1/mode = 0
-sources/0 = SubResource("TileSetAtlasSource_dopym")
-sources/1 = SubResource("TileSetAtlasSource_v38iq")
+sources/0 = SubResource("TileSetAtlasSource_xy4tn")
+sources/1 = SubResource("TileSetAtlasSource_mx85b")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v38iq"]
 size = Vector2(260, 142)
