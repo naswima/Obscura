@@ -582,7 +582,7 @@ position_smoothing_speed = 10.0
 script = ExtResource("5_v8kj3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(736, 648)
+position = Vector2(736, 644)
 shape = SubResource("RectangleShape2D_mx85b")
 
 [node name="Portal" type="Area2D" parent="."]
