@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bot4630oy3yx7" path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" id="5_cr02d"]
 [ext_resource type="Texture2D" uid="uid://dfxpnuoi34ldb" path="res://Free/Main Characters/Ninja Frog/Wall Jump (32x32).png" id="6_fvx2o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvx2o"]
-size = Vector2(24, 26)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1crcc"]
+size = Vector2(21, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1crcc"]
 atlas = ExtResource("3_fnkj0")
@@ -212,7 +212,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -238,7 +238,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hit",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -261,7 +261,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -302,7 +302,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running",
-"speed": 5.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -322,18 +322,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"wall jump",
-"speed": 5.0
+"speed": 20.0
 }]
 
 [node name="mr_ frog" type="CharacterBody2D"]
 script = ExtResource("1_otlhq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
-shape = SubResource("RectangleShape2D_fvx2o")
+position = Vector2(0.5, 8)
+shape = SubResource("RectangleShape2D_1crcc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(-1.19209e-07, 6)
+scale = Vector2(0.96875, 0.96875)
 sprite_frames = SubResource("SpriteFrames_1crcc")
-frame_progress = 0.0125498
+frame_progress = 0.848149
 speed_scale = 1.5
+
+[node name="idle" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
