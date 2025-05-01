@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=32 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Script" uid="uid://bgiwb86j4opch" path="res://level_1.gd" id="1_eqrsh"]
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="9_n8vhr"]
 [ext_resource type="Texture2D" uid="uid://dt7emjdhi6tcu" path="res://le.png" id="10_5j5gb"]
 [ext_resource type="Texture2D" uid="uid://bspw5s070jng1" path="res://coinz.png" id="11_mx85b"]
+[ext_resource type="Script" uid="uid://buxdv7v66d5bd" path="res://area_2d_4.gd" id="13_rjtee"]
 [ext_resource type="AudioStream" uid="uid://c5hrk603ak7as" path="res://Randy Sharp - Slime Time.mp3" id="14_3l65w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
@@ -632,6 +633,7 @@ texture = ExtResource("8_usj0q")
 
 [node name="Area2D4" type="Area2D" parent="." groups=["Pickups"]]
 position = Vector2(917.25, 355)
+script = ExtResource("13_rjtee")
 
 [node name="Le" type="Sprite2D" parent="Area2D4"]
 position = Vector2(-93.25, 46.0001)
