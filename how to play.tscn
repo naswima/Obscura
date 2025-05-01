@@ -11,12 +11,12 @@ default_font = ExtResource("3_n84ig")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enlph"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_js1n7"]
-bg_color = Color(0.941176, 0.541176, 0.592157, 1)
+bg_color = Color(0.996078, 0.694118, 0.717647, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-shadow_color = Color(0.404511, 0.404511, 0.404511, 0.6)
+shadow_color = Color(0.403922, 0.403922, 0.403922, 0.313726)
 shadow_size = 15
 
 [node name="Node2D" type="Node2D"]
@@ -38,10 +38,11 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(0.283018, 0.283018, 0.283018, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/align_to_largest_stylebox = 0
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 28
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_enlph")
 theme_override_styles/normal = SubResource("StyleBoxFlat_js1n7")
-text = "Back to Main Menu"
+text = "Back to 
+Main Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_js1n7")
