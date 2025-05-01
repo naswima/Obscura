@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var item_name: String = "berry"
+@export var item_name: String = "Coin"
 signal picked_up(item_name: String)  # Ensure the signal is defined with the parameter
 
 func _on_body_entered(body: Node) -> void:

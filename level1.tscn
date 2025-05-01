@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=38 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Script" uid="uid://bgiwb86j4opch" path="res://level_1.gd" id="1_eqrsh"]
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
@@ -14,8 +14,14 @@
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="9_n8vhr"]
 [ext_resource type="Texture2D" uid="uid://dt7emjdhi6tcu" path="res://le.png" id="10_5j5gb"]
 [ext_resource type="Texture2D" uid="uid://bspw5s070jng1" path="res://coinz.png" id="11_mx85b"]
+[ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="13_1idop"]
 [ext_resource type="Script" uid="uid://buxdv7v66d5bd" path="res://area_2d_4.gd" id="13_rjtee"]
 [ext_resource type="AudioStream" uid="uid://c5hrk603ak7as" path="res://Randy Sharp - Slime Time.mp3" id="14_3l65w"]
+[ext_resource type="Script" uid="uid://2685odottniu" path="res://area_2d_5.gd" id="16_6e4cv"]
+[ext_resource type="Script" uid="uid://c3g54fvujdl52" path="res://area_2d_6.gd" id="18_uuy0h"]
+[ext_resource type="Script" uid="uid://p3mlm0xqln0u" path="res://area_2d_7.gd" id="20_52iny"]
+[ext_resource type="Script" uid="uid://cpecqv8b7rmks" path="res://area_2d_8.gd" id="21_nxqqj"]
+[ext_resource type="Script" uid="uid://b2q3pyjialn4c" path="res://area_2d_9.gd" id="22_7nyxr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xy4tn"]
 texture = ExtResource("2_ootpb")
@@ -621,6 +627,7 @@ position = Vector2(598.5, 449.125)
 shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Area2D3" type="Area2D" parent="."]
+script = ExtResource("13_1idop")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2(917.25, 355)
@@ -646,6 +653,7 @@ shape = SubResource("RectangleShape2D_eqrsh")
 
 [node name="Area2D5" type="Area2D" parent="." groups=["Pickups"]]
 position = Vector2(820, 403)
+script = ExtResource("16_6e4cv")
 
 [node name="Le2" type="Sprite2D" parent="Area2D5" groups=["Pickups"]]
 position = Vector2(-503, 158)
@@ -663,6 +671,7 @@ pitch_scale = 1.29
 autoplay = true
 
 [node name="Area2D6" type="Area2D" parent="."]
+script = ExtResource("18_uuy0h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
 shape = SubResource("RectangleShape2D_3l65w")
@@ -674,6 +683,7 @@ texture = ExtResource("11_mx85b")
 
 [node name="Area2D7" type="Area2D" parent="."]
 position = Vector2(566, 503)
+script = ExtResource("20_52iny")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7" groups=["Pickups"]]
 position = Vector2(411, -33)
@@ -686,6 +696,7 @@ texture = ExtResource("11_mx85b")
 
 [node name="Area2D8" type="Area2D" parent="."]
 position = Vector2(977, 470)
+script = ExtResource("21_nxqqj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8" groups=["Pickups"]]
 position = Vector2(-247, -66)
@@ -698,6 +709,7 @@ texture = ExtResource("11_mx85b")
 
 [node name="Area2D9" type="Area2D" parent="."]
 position = Vector2(732, 409)
+script = ExtResource("22_7nyxr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9" groups=["Pickups"]]
 position = Vector2(-162, 94)

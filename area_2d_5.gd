@@ -4,9 +4,11 @@ extends Area2D
 signal picked_up(item_name: String)  # Ensure the signal is defined with the parameter
 
 func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("player"):  # Check if the body is the player
+	if body.is_in_group("player"):
 		print("Picked up:", item_name)
-		emit_signal("picked_up", item_name)  # Emit the signal with the item name
-		queue_free()  # Remove the item after it's picked up
+		emit_signal("picked_up", item_name)  # Pass item_name when emitting the signal
+		queue_free()
+
+
 
 @onready var area_shape = $CollisionShape2D
