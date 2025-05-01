@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cngov2qsl5xf3"]
+[gd_scene load_steps=17 format=4 uid="uid://cngov2qsl5xf3"]
 
 [ext_resource type="Script" uid="uid://cu4nii1awd1j0" path="res://main.gd" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://t7r53cds76vb" path="res://Free/Background/Purple.png" id="1_ig7tw"]
@@ -407,6 +407,9 @@ shadow_color = Color(0.272047, 0.272047, 0.272047, 0.6)
 shadow_size = 11
 shadow_offset = Vector2(0, 3)
 
+[sub_resource type="Theme" id="Theme_kek77"]
+default_font = ExtResource("4_7mycd")
+
 [node name="StartPage" type="Node2D"]
 position = Vector2(0, 1)
 script = ExtResource("1_272bh")
@@ -453,6 +456,7 @@ offset_left = 423.0
 offset_top = 428.0
 offset_right = 689.0
 offset_bottom = 533.0
+theme = SubResource("Theme_kek77")
 theme_override_colors/font_color = Color(0.847474, 0.847474, 0.847474, 1)
 theme_override_fonts/font = SubResource("FontFile_1bvp3")
 theme_override_font_sizes/font_size = 37
