@@ -715,7 +715,7 @@ script = ExtResource("22_7nyxr")
 position = Vector2(-162, 94)
 shape = SubResource("RectangleShape2D_beq0j")
 
-[node name="Coinz5" type="Sprite2D" parent="Area2D9" groups=["Pickups"]]
+[node name="Coinz5" type="Sprite2D" parent="Area2D9"]
 position = Vector2(-164, 96)
 scale = Vector2(0.00811767, 0.00708013)
 texture = ExtResource("11_mx85b")
