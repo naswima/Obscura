@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
-@onready var item = $ItemNode  # Reference to the Area2D item node (make sure the path is correct)
+@export var spawn_point: Marker2D  # Set the spawn point directly in the export variable
+#@onready var item = $ItemNode  # Reference to the Area2D item node (make sure the path is correct)
 @onready var animated_sprite = $AnimatedSprite2D  # Reference to the animated sprite
 
+var pickedupitems = 0
 # --- Movement and Physics ---
 @export var speed: float = 200.0
 @export var jump_velocity: float = -500.0
@@ -47,17 +49,6 @@ func _on_portal_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		get_tree().change_scene_to_file("res://level 2.tscn")
 
-# --- _ready() Function ---
-
-	# Check if the item node exists
-	if item:
-		# Correctly create a Callable reference for the signal connection
-		item.connect("picked_up", Callable(self, "_on_item_picked_up"))  # Use Callable for signal connection
-	else:
-		print("Item node not found!")  # This will print if item node is missing in the scene
-
-	animated_sprite.connect("animation_finished", Callable(self, "_on_animation_finished"))  # Connect animation finished signal
-
 # --- Physics Process ---
 func _physics_process(delta):
 	var direction := Vector2.ZERO
@@ -87,3 +78,5 @@ func _physics_process(delta):
 	# --- Animation ---
 	update_animation(direction)
 	
+func respawn(): 
+	position = spawn_point.position

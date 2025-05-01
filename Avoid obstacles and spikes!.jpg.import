@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c67y5no61k8yk"
-path="res://.godot/imported/How to Play.jpeg-f01228c1792291064e90dc6d59990d66.ctex"
+uid="uid://7j658ycf7nid"
+path="res://.godot/imported/Avoid obstacles and spikes!.jpg-e389a8fffb7ddb7502d1b78236b82a70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://How to Play.jpeg"
-dest_files=["res://.godot/imported/How to Play.jpeg-f01228c1792291064e90dc6d59990d66.ctex"]
+source_file="res://Avoid obstacles and spikes!.jpg"
+dest_files=["res://.godot/imported/Avoid obstacles and spikes!.jpg-e389a8fffb7ddb7502d1b78236b82a70.ctex"]
 
 [params]
 

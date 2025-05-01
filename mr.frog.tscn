@@ -396,7 +396,7 @@ _data = {
 &"run": SubResource("Animation_avyda")
 }
 
-[node name="mr_ frog" type="CharacterBody2D"]
+[node name="mr_ frog" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_otlhq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

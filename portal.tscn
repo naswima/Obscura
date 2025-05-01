@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://yeaf4aos4114"]
+
+[ext_resource type="Script" uid="uid://c6eeiqrkffjhu" path="res://portal.gd" id="1_0r486"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx44q"]
+size = Vector2(20, 50)
+
+[node name="Portal" type="Area2D"]
+script = ExtResource("1_0r486")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hx44q")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+gizmo_extents = 100.1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

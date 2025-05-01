@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cngov2qsl5xf3"]
+[gd_scene load_steps=16 format=4 uid="uid://cngov2qsl5xf3"]
 
 [ext_resource type="Script" uid="uid://cu4nii1awd1j0" path="res://main.gd" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://t7r53cds76vb" path="res://Free/Background/Purple.png" id="1_ig7tw"]
@@ -178,6 +178,9 @@ texture = ExtResource("2_0xm2m")
 [sub_resource type="TileSet" id="TileSet_h2yge"]
 sources/0 = SubResource("TileSetAtlasSource_0xm2m")
 sources/1 = SubResource("TileSetAtlasSource_h2yge")
+
+[sub_resource type="Theme" id="Theme_5vw27"]
+default_font = ExtResource("4_7mycd")
 
 [sub_resource type="FontFile" id="FontFile_1bvp3"]
 cache/0/16/0/ascent = 0.0
@@ -437,6 +440,7 @@ offset_left = 423.0
 offset_top = 289.0
 offset_right = 689.0
 offset_bottom = 394.0
+theme = SubResource("Theme_5vw27")
 theme_override_colors/font_color = Color(0.847474, 0.847474, 0.847474, 1)
 theme_override_fonts/font = SubResource("FontFile_1bvp3")
 theme_override_font_sizes/font_size = 37

@@ -30,7 +30,6 @@ func _on_area_2d_3_body_entered(body: Node2D) -> void:
 	player_entered = true
 	print("Item picked up!") 
 
-
 func _on_area_2d_3_body_exited(body: Node2D) -> void:
 	player_entered = false
 
