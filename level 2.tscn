@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=14 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_gvk67"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://c5hrk603ak7as" path="res://Randy Sharp - Slime Time.mp3" id="5_cqxf2"]
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="5_tfy05"]
 [ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_26ho8"]
+[ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="8_6phv7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -399,6 +400,9 @@ corner_radius_bottom_left = 7
 shadow_color = Color(0, 0, 0, 0.25098)
 shadow_size = 5
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ap4fx"]
+size = Vector2(2458.88, 21.5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Pink" type="Sprite2D" parent="."]
@@ -432,10 +436,9 @@ theme_override_fonts/font = ExtResource("5_tfy05")
 theme_override_styles/normal = SubResource("StyleBoxFlat_26ho8")
 text = "Back"
 
-[node name="mr_ frog" parent="." node_paths=PackedStringArray("spawn_point") instance=ExtResource("4_hmp44")]
+[node name="mr_ frog" parent="." instance=ExtResource("4_hmp44")]
 process_mode = 3
 position = Vector2(44, 485)
-spawn_point = NodePath("")
 
 [node name="Camera2D" type="Camera2D" parent="mr_ frog"]
 position = Vector2(-1, -2)
@@ -447,3 +450,15 @@ limit_bottom = 646
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("7_26ho8")
+
+[node name="spawn point" type="Marker2D" parent="."]
+position = Vector2(1284.44, 1126)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("8_6phv7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1253.44, 636)
+shape = SubResource("RectangleShape2D_ap4fx")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
