@@ -600,3 +600,4 @@ text = "Back"
 position = Vector2(2483, 646)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

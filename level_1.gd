@@ -46,3 +46,8 @@ func _on_area_2d_5_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_5_body_exited(body: Node2D) -> void:
 	player_entered = false
+
+
+func _on_button_pressed() -> void:
+	var main_scene = load("res://main.tscn")
+	get_tree().change_scene_to_packed(main_scene)
