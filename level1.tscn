@@ -588,9 +588,9 @@ fruitname = "strawberry"
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 1080.0
-offset_top = 23.0
+offset_top = 18.0
 offset_right = 1143.0
-offset_bottom = 54.0
+offset_bottom = 49.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("15_3l65w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rjtee")

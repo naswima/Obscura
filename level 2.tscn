@@ -430,10 +430,11 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 1077.0
-offset_top = 23.0
-offset_right = 1140.0
-offset_bottom = 54.0
+offset_left = 1079.0
+offset_top = 19.0
+offset_right = 1142.0
+offset_bottom = 50.0
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_tfy05")
 theme_override_styles/normal = SubResource("StyleBoxFlat_26ho8")
