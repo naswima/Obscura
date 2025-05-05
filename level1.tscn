@@ -587,7 +587,6 @@ tile_set = SubResource("TileSet_mx85b")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_3l65w")
-volume_db = 7.068
 autoplay = true
 
 [node name="spike2" parent="." instance=ExtResource("7_i2041")]
@@ -641,10 +640,10 @@ fruitname = "strawberry"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 1079.0
-offset_top = 28.0
-offset_right = 1142.0
-offset_bottom = 59.0
+offset_left = 1080.0
+offset_top = 23.0
+offset_right = 1143.0
+offset_bottom = 54.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("15_3l65w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rjtee")
