@@ -448,7 +448,7 @@ position = Vector2(1410, 636)
 shape = SubResource("RectangleShape2D_mx85b")
 
 [node name="Portal" parent="." instance=ExtResource("9_n8vhr")]
-position = Vector2(2465, 385)
+position = Vector2(2481, 385)
 nextlevel = ExtResource("10_eqrsh")
 
 [node name="Checkpoint" type="Sprite2D" parent="Portal"]
