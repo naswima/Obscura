@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=16 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
+[ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_gvk67"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_hmp44"]
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_hmp44"]
@@ -404,7 +405,8 @@ shadow_size = 5
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ap4fx"]
 size = Vector2(2458.88, 21.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="level 2" type="Node2D"]
+script = ExtResource("1_mhe28")
 
 [node name="Pink" type="Sprite2D" parent="."]
 texture_repeat = 2
@@ -467,4 +469,5 @@ shape = SubResource("RectangleShape2D_ap4fx")
 position = Vector2(4367, 112)
 fruitname = "trophy"
 
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
