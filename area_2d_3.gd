@@ -1,14 +1,12 @@
 extends Area2D
 
-@export var item_name: String = "berry"
-signal picked_up(item_name: String)  # Ensure the signal is defined with the parameter
+@onready var player: Node2D = get_node("/root/Scene/Player")  # Adjust path to the player node
 
-func _on_body_entered(body: Node) -> void:
+func _ready():
+	# Connect the body_entered signal to handle collisions
+	body_entered.connect(_on_body_entered)
+
+func _on_body_entered(body: Node2D):
+	# Check if the overlapping body is in the "player" group
 	if body.is_in_group("player"):
-		print("Picked up:", item_name)
-		emit_signal("picked_up", item_name)  # Pass item_name when emitting the signal
-		queue_free()
-
-
-
-@onready var area_shape = $CollisionShape2D
+		body.respawn()
