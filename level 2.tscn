@@ -538,5 +538,17 @@ fruitname = "trophy"
 position = Vector2(785, 287)
 fruitname = "trophy"
 
+[node name="items19" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(777, 270)
+fruitname = "trophy"
+
+[node name="items20" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(864, 191)
+fruitname = "trophy"
+
+[node name="items21" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(882, 191)
+fruitname = "trophy"
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
