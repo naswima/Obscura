@@ -471,7 +471,7 @@ position = Vector2(4373, 109)
 fruitname = "trophy"
 
 [node name="items2" parent="." instance=ExtResource("9_ap4fx")]
-position = Vector2(221, 612)
+position = Vector2(252, 547)
 fruitname = "trophy"
 
 [node name="items3" parent="." instance=ExtResource("9_ap4fx")]
