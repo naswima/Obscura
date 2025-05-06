@@ -467,7 +467,15 @@ position = Vector2(1253.44, 636)
 shape = SubResource("RectangleShape2D_ap4fx")
 
 [node name="items" parent="." instance=ExtResource("9_ap4fx")]
-position = Vector2(4367, 112)
+position = Vector2(4373, 109)
+fruitname = "trophy"
+
+[node name="items2" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(221, 612)
+fruitname = "trophy"
+
+[node name="items3" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(304, 496)
 fruitname = "trophy"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

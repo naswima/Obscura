@@ -522,7 +522,6 @@ fruitname = "melon"
 
 [node name="items16" parent="items" instance=ExtResource("12_hx44q")]
 position = Vector2(1512, 479)
-fruitname = "cherry"
 
 [node name="items17" parent="items" instance=ExtResource("12_hx44q")]
 position = Vector2(1635, 415)
@@ -530,7 +529,6 @@ fruitname = "orange"
 
 [node name="items21" parent="items" instance=ExtResource("12_hx44q")]
 position = Vector2(1264, 287)
-fruitname = "cherry"
 
 [node name="items22" parent="items" instance=ExtResource("12_hx44q")]
 position = Vector2(1568, 255)
@@ -546,7 +544,6 @@ fruitname = "strawberry"
 
 [node name="items30" parent="items" instance=ExtResource("12_hx44q")]
 position = Vector2(2360, 303)
-fruitname = "cherry"
 
 [node name="items27" parent="items" instance=ExtResource("12_hx44q")]
 position = Vector2(2361, 191)
