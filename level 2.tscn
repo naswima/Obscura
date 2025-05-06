@@ -472,83 +472,83 @@ fruitname = "trophy"
 
 [node name="items2" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(252, 547)
-fruitname = "trophy"
+fruitname = "apple"
 
 [node name="items3" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(304, 496)
-fruitname = "trophy"
+fruitname = "strawberry"
 
 [node name="items4" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(434, 416)
-fruitname = "trophy"
+fruitname = "pineapple"
 
 [node name="items5" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(457, 415)
-fruitname = "trophy"
+fruitname = "pineapple"
 
 [node name="items6" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(478, 415)
-fruitname = "trophy"
+fruitname = "pineapple"
 
 [node name="items7" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(415, 463)
-fruitname = "trophy"
+fruitname = "apple"
 
 [node name="items8" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(546, 481)
-fruitname = "trophy"
+fruitname = "apple"
 
 [node name="items9" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(573, 613)
-fruitname = "trophy"
+fruitname = "pineapple"
 
 [node name="items10" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(565, 480)
-fruitname = "trophy"
+fruitname = "apple"
 
 [node name="items11" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(674, 384)
-fruitname = "trophy"
+fruitname = "strawberry"
 
 [node name="items12" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(518, 443)
-fruitname = "trophy"
+fruitname = "cherry"
 
 [node name="items13" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(569, 287)
-fruitname = "trophy"
+fruitname = "strawberry"
 
 [node name="items14" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(462, 192)
-fruitname = "trophy"
+fruitname = "pineapple"
 
 [node name="items15" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(482, 191)
-fruitname = "trophy"
+fruitname = "pineapple"
 
 [node name="items16" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(472, 174)
-fruitname = "trophy"
+fruitname = "pineapple"
 
 [node name="items17" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(767, 287)
-fruitname = "trophy"
+fruitname = "apple"
 
 [node name="items18" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(785, 287)
-fruitname = "trophy"
+fruitname = "apple"
 
 [node name="items19" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(777, 270)
-fruitname = "trophy"
+fruitname = "apple"
 
 [node name="items20" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(864, 191)
-fruitname = "trophy"
+fruitname = "cherry"
 
 [node name="items21" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(882, 191)
-fruitname = "trophy"
+fruitname = "cherry"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
