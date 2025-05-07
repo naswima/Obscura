@@ -596,5 +596,22 @@ text = "Back"
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(2483, 646)
 
+[node name="MissingFruitsPopup" type="Popup" parent="."]
+initial_position = 1
+size = Vector2i(848, 90)
+visible = true
+
+[node name="MessageLabel" type="Label" parent="MissingFruitsPopup"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+Uh oh! 🍓You need all the fruits before you can go! Looks like you're missing a few—go grab 'em and try again!"
+
+[node name="Button" type="Button" parent="MissingFruitsPopup"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "OK"
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MissingFruitsPopup/Button" to="." method="_on_button_pressed"]
