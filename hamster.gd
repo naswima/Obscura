@@ -79,4 +79,8 @@ func _physics_process(delta):
 	update_animation(direction)
 	
 func respawn(): 
-	position = get_node("../spawn point2").position
+	var spawn_point = get_node("../spawn point2")
+	if spawn_point is Node2D:
+		position = spawn_point.position
+	else:
+		push_error("spawn point2 is not a valid Node2D!")
