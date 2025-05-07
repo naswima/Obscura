@@ -79,4 +79,4 @@ func _physics_process(delta):
 	update_animation(direction)
 	
 func respawn(): 
-	position = $"../spawn point2".position
+	position = get_node("../spawn point2").position
