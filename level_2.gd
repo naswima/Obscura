@@ -16,17 +16,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_3_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
-
-
-@onready var congrats_dialog = $CanvasLayer/CongratsDialog
-
-func _ready():
-	show_congrats_message()
-
-func show_congrats_message():
-	congrats_dialog.dialog_text = "Woohoo! You picked every last fruity treat—so proud of you! 🍓🍊 You win!"
-	congrats_dialog.popup_centered()
-	congrats_dialog.confirmed.connect(_on_dialog_confirmed)
-
-func _on_dialog_confirmed():
-	get_tree().change_scene_to_file("res://main.tscn")
