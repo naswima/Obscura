@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=23 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="9_ap4fx"]
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="11_ais5g"]
 [ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="12_a1o74"]
+[ext_resource type="Texture2D" uid="uid://dlc44t4m7umxe" path="res://trophy.png" id="13_21y4i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -416,12 +417,14 @@ size = Vector2(109, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21y4i"]
 size = Vector2(1950.71, 21)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tg8eb"]
+
 [node name="level 2" type="Node2D"]
 script = ExtResource("1_mhe28")
 
 [node name="Pink" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(2184.75, 492.5)
+position = Vector2(2270, 434)
 scale = Vector2(4.4165, 1.425)
 texture = ExtResource("1_cxgt8")
 region_enabled = true
@@ -474,7 +477,7 @@ position = Vector2(44, 482)
 script = ExtResource("8_6phv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(948.5, -56)
+position = Vector2(947, -53)
 shape = SubResource("RectangleShape2D_ap4fx")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
@@ -497,7 +500,7 @@ shape = SubResource("RectangleShape2D_ap4fx")
 script = ExtResource("11_ais5g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(176, 635)
+position = Vector2(177, 632)
 shape = SubResource("RectangleShape2D_a1o74")
 
 [node name="spawn point2" type="Marker2D" parent="."]
@@ -559,7 +562,7 @@ position = Vector2(2843, 623)
 fruitname = "pineapple"
 
 [node name="items28" parent="." instance=ExtResource("9_ap4fx")]
-position = Vector2(2841, 511)
+position = Vector2(2842, 511)
 fruitname = "melon"
 
 [node name="items29" parent="." instance=ExtResource("9_ap4fx")]
@@ -626,7 +629,24 @@ fruitname = "orange"
 position = Vector2(251, 543)
 fruitname = "melon"
 
+[node name="Trophy" type="Sprite2D" parent="."]
+position = Vector2(2880, 150)
+scale = Vector2(0.0148729, 0.00749553)
+texture = ExtResource("13_21y4i")
+
+[node name="Area2D" type="Area2D" parent="Trophy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trophy/Area2D"]
+position = Vector2(-67.2383, -400.239)
+scale = Vector2(67.2365, 133.413)
+shape = SubResource("CapsuleShape2D_tg8eb")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="CanvasLayer2"]
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Trophy/Area2D" to="." method="_on_area_2d_body_entered"]

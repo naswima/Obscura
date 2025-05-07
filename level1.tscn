@@ -620,7 +620,7 @@ position = Vector2(2483, 646)
 
 [node name="MissingFruitsPopup" type="Popup" parent="."]
 initial_position = 1
-size = Vector2i(1407, 90)
+size = Vector2i(1411, 90)
 visible = true
 theme = SubResource("Theme_3l65w")
 
