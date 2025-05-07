@@ -635,6 +635,7 @@ theme_override_constants/shadow_outline_size = 5
 theme_override_styles/normal = SubResource("StyleBoxFlat_n8vhr")
 text = "
  Uh oh! 🍓You need all the fruits before you can go! Looks like you're missing a few—go grab 'em and try again!"
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="MissingFruitsPopup"]
 offset_left = 656.0
