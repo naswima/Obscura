@@ -1,55 +1,56 @@
-class_name Level1
-extends Node2D
-
+class_name Level1 extends Node2D
 @onready var be: Sprite2D = $Be
-@onready var missing_fruits_popup = $MissingFruitsPopup
-
-var player_entered = false
-var strawberry_picked = 0
-const REQUIRED_FRUITS = 4  # Change this based on your level
+@onready var player_entered = false
+@onready var strawberry_picked = 0
 
 func _ready() -> void:
 	print(be)
-
+	
 func _process(delta: float) -> void:
-	if player_entered:
+	if player_entered == true:
 		be.visible = false
-		strawberry_picked += 1
-		player_entered = false  # Reset to avoid repeated increment
-
-# Called when the player exits a fruit area
+		strawberry_picked +=1
+		
 func _on_area_body_exited(body: Node2D, area_id: int) -> void:
 	if body.is_in_group("player"):
-		be.visible = true
+		player_entered = false
+		be.visible = true  # Make the sprite visible again
 		print("Player exited area %d" % area_id)
 
-# Fruit pickup triggers
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		player_entered = true
-		print("Item picked up!")
+	player_entered = true
+	print("Item picked up!")  # Replace with function body.
+
+
+func _on_area_2d_2_body_exited(body: Node2D) -> void:
+	player_entered = false  # Replace with function body.
+
 
 func _on_area_2d_3_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		player_entered = true
-		print("Item picked up!") 
+	player_entered = true
+	print("Item picked up!") 
+
+func _on_area_2d_3_body_exited(body: Node2D) -> void:
+	player_entered = false
 
 func _on_area_2d_4_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		player_entered = true
-		print("Item picked up!") 
+	player_entered = true
+	print("Item picked up!") 
+
+func _on_area_2d_4_body_exited(body: Node2D) -> void:
+	player_entered = false
 
 func _on_area_2d_5_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		player_entered = true
-		print("Item picked up!") 
+	player_entered = true
+	print("Item picked up!") 
 
-# Called when the player enters the portal area
-func _on_portal_area_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		if strawberry_picked < REQUIRED_FRUITS:
-			missing_fruits_popup.popup_centered()
-		else:
-			print("You can proceed to the next level!")
+func _on_area_2d_5_body_exited(body: Node2D) -> void:
+	player_entered = false
 
-# Called when OK button in popup is pressed
+
+func _on_OKButton_pressed():
+	$MissingFruitsPopup.hide()
+
+
+func _on_missing_fruits_popup_close_requested() -> void:
+	pass # Replace with function body.
