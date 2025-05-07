@@ -12,4 +12,4 @@ func _on_body_entered(body: Node2D) -> void:
 			else:
 				push_error("nextlevel is not a valid PackedScene!")
 		else:
-			print("Uh oh! 🍓 You need all the fruits before you can go! Looks like you're missing a few—go grab 'em and try again!")
+			get_node("MissingFruitsPopup").popup_centered()
