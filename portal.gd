@@ -8,9 +8,8 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		# Ensure the 'pickedupitems' exists and is properly initialized
 		if body.has_method("pickedupitems") and body.pickedupitems == fruitneeded:
-			if nextlevel:  # Check if nextlevel is assigned
+			if nextlevel: 
 				get_tree().change_scene_to_packed(nextlevel)
 			else:
 				push_error("nextlevel is not a valid PackedScene!")
