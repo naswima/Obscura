@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=21 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
@@ -407,11 +407,14 @@ shadow_size = 5
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ap4fx"]
 size = Vector2(96.5, 14.75)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tg8eb"]
+size = Vector2(30, 6.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1o74"]
 size = Vector2(109, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21y4i"]
-size = Vector2(1745.41, 21)
+size = Vector2(1950.71, 21)
 
 [node name="level 2" type="Node2D"]
 script = ExtResource("1_mhe28")
@@ -482,8 +485,12 @@ shape = SubResource("RectangleShape2D_ap4fx")
 position = Vector2(1173, -120)
 shape = SubResource("RectangleShape2D_ap4fx")
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2717, -44.25)
+shape = SubResource("RectangleShape2D_tg8eb")
+
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1198, 136)
+position = Vector2(1197, 136)
 shape = SubResource("RectangleShape2D_ap4fx")
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -500,7 +507,7 @@ position = Vector2(43, 484)
 script = ExtResource("12_a1o74")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(1358, 636)
+position = Vector2(1460.65, 636)
 shape = SubResource("RectangleShape2D_21y4i")
 
 [node name="items2" parent="." instance=ExtResource("9_ap4fx")]
@@ -542,6 +549,26 @@ fruitname = "strawberry"
 [node name="items19" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(2373, 591)
 fruitname = "orange"
+
+[node name="items25" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(2752, 578)
+fruitname = "strawberry"
+
+[node name="items26" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(2843, 623)
+fruitname = "pineapple"
+
+[node name="items28" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(2841, 511)
+fruitname = "melon"
+
+[node name="items29" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(2470, 351)
+fruitname = "kiwi"
+
+[node name="items27" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(2820, 623)
+fruitname = "pineapple"
 
 [node name="items22" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(2377, 335)
