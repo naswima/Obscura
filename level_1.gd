@@ -58,7 +58,7 @@ func _go_to_next_level():
 @onready var music_player = $AudioStreamPlayer
 
 func _readyy():
-	var music_stream = load("res://ELEVATOR (LOOP).mp3")
+	var music_stream = load("res://bgm_action_4.mp3")
 	if music_stream is AudioStream:
 			music_stream.loop = true
 			music_player.stream = music_stream
