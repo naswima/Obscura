@@ -435,7 +435,7 @@ script = ExtResource("1_eqrsh")
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(1224, -146)
+position = Vector2(1225, -146)
 scale = Vector2(2.49854, 1.582)
 texture = ExtResource("2_dopym")
 region_enabled = true
