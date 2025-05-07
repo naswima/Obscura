@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bx0brdbsi0yha"]
+[gd_scene load_steps=24 format=4 uid="uid://bx0brdbsi0yha"]
 
 [ext_resource type="Script" uid="uid://bgiwb86j4opch" path="res://level_1.gd" id="1_eqrsh"]
 [ext_resource type="Texture2D" uid="uid://cooaarha4qmre" path="res://Free/Background/Brown.png" id="2_dopym"]
@@ -408,6 +408,8 @@ corner_radius_bottom_left = 7
 shadow_color = Color(0, 0, 0, 0.25098)
 shadow_size = 5
 
+[sub_resource type="Theme" id="Theme_3l65w"]
+
 [sub_resource type="Theme" id="Theme_n8vhr"]
 default_font = ExtResource("15_3l65w")
 
@@ -420,6 +422,13 @@ corner_radius_bottom_left = 6
 
 [sub_resource type="Theme" id="Theme_eqrsh"]
 default_font = ExtResource("15_3l65w")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqrsh"]
+bg_color = Color(0.896668, 0.626518, 0.400984, 0.635294)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="level 1" type="Node2D"]
 script = ExtResource("1_eqrsh")
@@ -611,22 +620,21 @@ position = Vector2(2483, 646)
 
 [node name="MissingFruitsPopup" type="Popup" parent="."]
 initial_position = 1
-size = Vector2i(1395, 90)
+size = Vector2i(1407, 90)
 visible = true
+theme = SubResource("Theme_3l65w")
 
 [node name="MessageLabel" type="Label" parent="MissingFruitsPopup"]
 offset_left = -1.0
-offset_top = -1.0
-offset_right = 1394.0
-offset_bottom = 90.0
+offset_top = 4.0
+offset_right = 1407.0
+offset_bottom = 86.0
 theme = SubResource("Theme_n8vhr")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.10046, 0.0747665, 0.0836935, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 5
 theme_override_styles/normal = SubResource("StyleBoxFlat_n8vhr")
 text = "
-Uh oh! 🍓You need all the fruits before you can go! Looks like you're missing a few—go grab 'em and try again!"
+ Uh oh! 🍓You need all the fruits before you can go! Looks like you're missing a few—go grab 'em and try again!"
 
 [node name="Button" type="Button" parent="MissingFruitsPopup"]
 offset_left = 656.0
@@ -634,6 +642,12 @@ offset_top = 50.0
 offset_right = 694.0
 offset_bottom = 81.0
 theme = SubResource("Theme_eqrsh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.962546, 0.962546, 0.962546, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("15_3l65w")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_eqrsh")
 text = "OK"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
