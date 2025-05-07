@@ -52,4 +52,11 @@ func _on_portal_area_body_entered(body: Node2D) -> void:
 		else:
 			print("You can proceed to the next level!")
 
-# Called when OK button in popup is pressed
+@onready var music_player = $AudioStreamPlayer
+
+func _readyy():
+	var music_stream = load("res://ELEVATOR (LOOP).mp3")
+	if music_stream is AudioStream:
+			music_stream.loop = true
+			music_player.stream = music_stream
+			music_player.play()

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_gvk67"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_hmp44"]
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_hmp44"]
-[ext_resource type="AudioStream" uid="uid://c5hrk603ak7as" path="res://Randy Sharp - Slime Time.mp3" id="5_cqxf2"]
+[ext_resource type="AudioStream" uid="uid://dker31e71fvae" path="res://bgm_menu.mp3" id="5_21y4i"]
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="5_tfy05"]
 [ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_26ho8"]
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="8_6phv7"]
@@ -436,7 +436,7 @@ tile_map_data = PackedByteArray("AAARAP//AAABAAUAAAAQAP//AAABAAUAAAAPAP//AAABAAU
 tile_set = SubResource("TileSet_tfy05")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_cqxf2")
+stream = ExtResource("5_21y4i")
 volume_db = 0.459
 pitch_scale = 1.29
 autoplay = true
