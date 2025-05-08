@@ -1,16 +1,20 @@
 extends Node2D
+@export var spawn_point: Marker2D
+var velocity: Vector2 = Vector2.ZERO
 
+func _on_body_entered(body: Node2D) -> void:
+	print("Entered:", body.name)
+	if body.is_in_group("player") and body.has_method("respawn"):
+		print("Calling respawn on", body.name)
+		velocity = Vector2.ZERO
+		body.die() 
+		body.respawn()  
 var player_entered = false
 
 func _on_button_pressed() -> void:
 	var main_scene = load("res://main.tscn")
 	get_tree().change_scene_to_packed(main_scene)
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		player_entered = true
-		print("Item picked up!")
 
 func _on_area_2d_3_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and player_entered:

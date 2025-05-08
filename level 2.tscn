@@ -11,9 +11,9 @@
 [ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_26ho8"]
 [ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://DeathZone.gd" id="8_6phv7"]
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="9_ap4fx"]
+[ext_resource type="Script" uid="uid://b1yksb50j82cw" path="res://spawn_point.gd" id="10_sdads"]
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="11_ais5g"]
 [ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="12_a1o74"]
-[ext_resource type="Script" path="res://spawn_point_2.gd" id="12_kd0jg"]
 [ext_resource type="Script" path="res://disappearing_wall.gd" id="14_tg8eb"]
 [ext_resource type="PackedScene" uid="uid://yeaf4aos4114" path="res://portal.tscn" id="15_n1lur"]
 [ext_resource type="Script" path="res://portal2.gd" id="16_b4b6e"]
@@ -508,9 +508,10 @@ theme_override_fonts/font = ExtResource("5_tfy05")
 theme_override_styles/normal = SubResource("StyleBoxFlat_26ho8")
 text = "Back"
 
-[node name="mr_ frog" parent="." instance=ExtResource("4_hmp44")]
+[node name="mr_ frog" parent="." node_paths=PackedStringArray("spawn_point") instance=ExtResource("4_hmp44")]
 process_mode = 3
 position = Vector2(44, 485)
+spawn_point = NodePath("../spawn point")
 
 [node name="Camera2D" type="Camera2D" parent="mr_ frog"]
 position = Vector2(-1, -2)
@@ -522,9 +523,6 @@ limit_bottom = 646
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("7_26ho8")
-
-[node name="spawn point" type="Marker2D" parent="."]
-position = Vector2(1284.44, 1126)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(44, 482)
@@ -596,10 +594,6 @@ script = ExtResource("11_ais5g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(177, 632)
 shape = SubResource("RectangleShape2D_a1o74")
-
-[node name="spawn point2" type="Marker2D" parent="."]
-position = Vector2(44, 485)
-script = ExtResource("12_kd0jg")
 
 [node name="Area2D3" type="Area2D" parent="."]
 script = ExtResource("12_a1o74")
@@ -816,9 +810,6 @@ fruitname = "melon"
 
 [node name="AcceptDialog" type="AcceptDialog" parent="CanvasLayer2"]
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(4428, 1)
-
 [node name="Portal2" parent="." instance=ExtResource("15_n1lur")]
 position = Vector2(4383, 96)
 script = ExtResource("16_b4b6e")
@@ -877,8 +868,13 @@ script = ExtResource("14_tg8eb")
 position = Vector2(78, -22)
 shape = SubResource("CapsuleShape2D_5hbhu")
 
+[node name="spawn point" type="Marker2D" parent="." node_paths=PackedStringArray("spawn_point")]
+position = Vector2(44, 494)
+script = ExtResource("10_sdads")
+spawn_point = NodePath(".")
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
 [connection signal="popup_hide" from="Portal2/WinPopup" to="." method="_on_win_popup_popup_hide"]
