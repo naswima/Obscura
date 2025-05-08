@@ -861,11 +861,11 @@ text = "Main Menu"
 script = ExtResource("17_sdads")
 
 [node name="DisappearingWall" type="Area2D" parent="."]
-position = Vector2(4243, 83)
+position = Vector2(4240, 81)
 script = ExtResource("14_tg8eb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DisappearingWall"]
-position = Vector2(78, -22)
+position = Vector2(80, -19)
 shape = SubResource("CapsuleShape2D_5hbhu")
 
 [node name="spawn point" type="Marker2D" parent="." node_paths=PackedStringArray("spawn_point")]
