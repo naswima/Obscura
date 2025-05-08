@@ -485,29 +485,33 @@ texture = ExtResource("6_crycw")
 transparent_bg = true
 title = "MissingFruitsPopup"
 initial_position = 1
-size = Vector2i(1420, 90)
+size = Vector2i(1420, 123)
 visible = true
 theme = SubResource("Theme_3l65w")
 script = ExtResource("16_1idop")
 
 [node name="MessageLabel" type="Label" parent="Portal/MissingFruitsPopup"]
-offset_left = -1.0
-offset_top = 4.0
-offset_right = 1407.0
-offset_bottom = 88.0
+anchors_preset = -1
+anchor_left = 0.241
+anchor_right = 0.241
+offset_left = -0.220001
+offset_top = 5.0
+offset_right = 729.78
+offset_bottom = 105.0
 theme = SubResource("Theme_n8vhr")
 theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 5
 theme_override_styles/normal = SubResource("StyleBoxFlat_n8vhr")
-text = "
- Uh oh! 🍓 You need all the fruits before you can go! Looks like you're missing a few—go grab 'em and try again!"
+text = "Uh oh! 🍓
+You need all the fruits before you can go!
+Looks like you're missing a few—go grab 'em and try again!"
 horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="Portal/MissingFruitsPopup"]
-offset_left = 656.0
-offset_top = 50.0
-offset_right = 694.0
-offset_bottom = 81.0
+offset_left = 679.0
+offset_top = 69.0
+offset_right = 717.0
+offset_bottom = 100.0
 theme = SubResource("Theme_eqrsh")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.962546, 0.962546, 0.962546, 1)
