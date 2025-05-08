@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=30 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="9_ap4fx"]
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="11_ais5g"]
 [ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="12_a1o74"]
+[ext_resource type="Script" uid="uid://ch37xpoj5yk3e" path="res://spawn_point_2.gd" id="12_kd0jg"]
+[ext_resource type="Script" uid="uid://cqdd377k18b4b" path="res://disappearing_wall.gd" id="14_tg8eb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -436,6 +438,10 @@ size = Vector2(109, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21y4i"]
 size = Vector2(1731.49, 21)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tg8eb"]
+radius = 8.0
+height = 138.0
+
 [node name="level 2" type="Node2D"]
 script = ExtResource("1_mhe28")
 
@@ -569,7 +575,8 @@ position = Vector2(177, 632)
 shape = SubResource("RectangleShape2D_a1o74")
 
 [node name="spawn point2" type="Marker2D" parent="."]
-position = Vector2(43, 484)
+position = Vector2(44, 485)
+script = ExtResource("12_kd0jg")
 
 [node name="Area2D3" type="Area2D" parent="."]
 script = ExtResource("12_a1o74")
@@ -792,6 +799,13 @@ fruitname = "melon"
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(4428, 1)
+
+[node name="DisappearingWall" type="Area2D" parent="."]
+script = ExtResource("14_tg8eb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DisappearingWall"]
+position = Vector2(4321, 61)
+shape = SubResource("CapsuleShape2D_tg8eb")
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
