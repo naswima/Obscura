@@ -2,14 +2,12 @@ extends CharacterBody2D
 
 @export var spawn_point: Marker2D
 @onready var animated_sprite = $AnimatedSprite2D
-
 @export var speed: float = 200.0
 @export var jump_velocity: float = -500.0
 @export var gravity: float = 1200.0
 
-var pickedupitems: int = 0  # ← Fixed here
-@onready var pickup_area = $PickupArea
-
+var pickedupitems: int = 0
+@onready var pickup_area = $PickupArea  
 var is_attacking: bool = false
 
 func update_animation(direction: Vector2) -> void:
@@ -26,16 +24,11 @@ func _on_animation_finished() -> void:
 	if animated_sprite.animation == "attack":
 		is_attacking = false
 
-func _on_pickup_entered(body):
-	if body.is_in_group("pickups"):
-		body.queue_free()
-		pickedupitems += 1  # ← Consider adding this if not handled in item
-
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		die()
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	var direction := Vector2.ZERO
 
 	if not is_attacking:
@@ -61,12 +54,10 @@ func _physics_process(delta):
 func _ready():
 	add_to_group("player")
 
-func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("hazard"):
-		die()
-
 func die():
 	respawn()
+	velocity = Vector2.ZERO
 
 func respawn():
-	global_position = spawn_point.global_position
+	if spawn_point:
+		global_position = spawn_point.global_position

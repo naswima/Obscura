@@ -13,12 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="9_ap4fx"]
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="11_ais5g"]
 [ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="12_a1o74"]
-[ext_resource type="Script" uid="uid://ch37xpoj5yk3e" path="res://spawn_point_2.gd" id="12_kd0jg"]
-[ext_resource type="Script" uid="uid://cqdd377k18b4b" path="res://disappearing_wall.gd" id="14_tg8eb"]
+[ext_resource type="Script" path="res://spawn_point_2.gd" id="12_kd0jg"]
+[ext_resource type="Script" path="res://disappearing_wall.gd" id="14_tg8eb"]
 [ext_resource type="PackedScene" uid="uid://yeaf4aos4114" path="res://portal.tscn" id="15_n1lur"]
-[ext_resource type="Script" uid="uid://yux53edo25rn" path="res://portal2.gd" id="16_b4b6e"]
-[ext_resource type="Script" uid="uid://dh72fmce1hypg" path="res://win_popup.gd" id="17_b4b6e"]
-[ext_resource type="Script" uid="uid://r3215fylbkcb" path="res://button3.gd" id="17_sdads"]
+[ext_resource type="Script" path="res://portal2.gd" id="16_b4b6e"]
+[ext_resource type="Script" path="res://win_popup.gd" id="17_b4b6e"]
+[ext_resource type="Script" path="res://button3.gd" id="17_sdads"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -634,7 +634,6 @@ fruitname = "cherry"
 
 [node name="items14" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(1577, 511)
-fruitname = "apple"
 
 [node name="items15" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(1769, 511)
@@ -682,11 +681,9 @@ fruitname = "melon"
 
 [node name="items49" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(4265, 383)
-fruitname = "apple"
 
 [node name="items50" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(4138, 159)
-fruitname = "apple"
 
 [node name="items46" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(3801, 575)
@@ -722,7 +719,6 @@ fruitname = "cherry"
 
 [node name="items37" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(3512, 176)
-fruitname = "apple"
 
 [node name="items38" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(3625, 177)
@@ -833,7 +829,7 @@ fruitneeded = 51
 [node name="WinPopup" type="Popup" parent="Portal2"]
 transparent_bg = true
 initial_position = 1
-size = Vector2i(746, 100)
+size = Vector2i(754, 100)
 visible = true
 script = ExtResource("17_b4b6e")
 
