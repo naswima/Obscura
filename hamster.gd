@@ -7,9 +7,10 @@ extends CharacterBody2D
 @export var jump_velocity: float = -500.0
 @export var gravity: float = 1200.0
 
-var is_attacking: bool = false
-
+var pickedupitems: int = 0  # ← Fixed here
 @onready var pickup_area = $PickupArea
+
+var is_attacking: bool = false
 
 func update_animation(direction: Vector2) -> void:
 	if is_attacking and not animated_sprite.is_playing():
@@ -28,6 +29,7 @@ func _on_animation_finished() -> void:
 func _on_pickup_entered(body):
 	if body.is_in_group("pickups"):
 		body.queue_free()
+		pickedupitems += 1  # ← Consider adding this if not handled in item
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
