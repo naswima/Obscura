@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=38 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="5_tfy05"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="5_tg8eb"]
 [ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_26ho8"]
+[ext_resource type="Script" path="res://area_2d.gd" id="8_6phv7"]
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="9_ap4fx"]
 [ext_resource type="Script" uid="uid://b1yksb50j82cw" path="res://spawn_point.gd" id="10_sdads"]
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="11_ais5g"]
@@ -525,6 +526,7 @@ script = ExtResource("7_26ho8")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(44, 482)
+script = ExtResource("8_6phv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(947, -53)
