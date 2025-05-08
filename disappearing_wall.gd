@@ -1,16 +1,26 @@
-extends Area2D  # Or StaticBody2D, depending on your setup
+extends Area2D  # Not Area2D — use StaticBody2D to *block movement*
 
-@onready var collision_shape = $CollisionShape2D  # Access the collision shape
+@onready var collision_shape = $CollisionShape2D
+@onready var sprite: Sprite2D = $Sprite2D  # Optional, if you want to hide it visually too
+@onready var player: CharacterBody2D = $"../mr_ frog"
 
 func _ready():
-	var player = get_node("/root/level2/mr_frog")  # Adjust this path to the actual player node in Level 2
+	player = get_node_or_null("/root/level2/mr_frog")
 	if player:
 		player.fruit_count_updated.connect(_on_fruit_count_updated)
+		_on_fruit_count_updated(player.fruit_count)  # check immediately in case count is already 50+
+	else:
+		print("Player not found!")
+
+func _process(delta: float) -> void:
+	if player:
+		if player.pickedupitems >= 2:
+			queue_free()
 
 func _on_fruit_count_updated(new_count: int) -> void:
 	if new_count >= 50:
-		collision_shape.disabled = true  # Disables the collision
-		self.visible = false             # Hides the wall (optional)
-		set_process(false)  
-		
-			 # Stops checking once the condition is met
+		collision_shape.disabled = true
+		if sprite:
+			sprite.visible = false
+	else:
+		collision_shape.disabled = false  # <-- This line ensures it's blocking when under 50

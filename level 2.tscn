@@ -811,7 +811,7 @@ fruitname = "melon"
 [node name="AcceptDialog" type="AcceptDialog" parent="CanvasLayer2"]
 
 [node name="Portal2" parent="." instance=ExtResource("15_n1lur")]
-position = Vector2(4383, 96)
+position = Vector2(4377, 97)
 script = ExtResource("16_b4b6e")
 fruitneeded = 51
 nextlevel = null
@@ -861,17 +861,24 @@ text = "Main Menu"
 script = ExtResource("17_sdads")
 
 [node name="DisappearingWall" type="Area2D" parent="."]
-position = Vector2(4243, 83)
+position = Vector2(4242, 82)
 script = ExtResource("14_tg8eb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DisappearingWall"]
-position = Vector2(78, -22)
+[node name="StaticBody2D" type="StaticBody2D" parent="DisappearingWall"]
+position = Vector2(79, -18)
+disable_mode = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DisappearingWall/StaticBody2D"]
+position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_5hbhu")
 
-[node name="spawn point" type="Marker2D" parent="." node_paths=PackedStringArray("spawn_point")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DisappearingWall"]
+position = Vector2(79, -18)
+shape = SubResource("CapsuleShape2D_5hbhu")
+
+[node name="spawn point" type="Marker2D" parent="."]
 position = Vector2(44, 494)
 script = ExtResource("10_sdads")
-spawn_point = NodePath(".")
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
