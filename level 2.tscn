@@ -14,11 +14,11 @@
 [ext_resource type="Script" uid="uid://b1yksb50j82cw" path="res://spawn_point.gd" id="10_sdads"]
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="11_ais5g"]
 [ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="12_a1o74"]
-[ext_resource type="Script" path="res://disappearing_wall.gd" id="14_tg8eb"]
+[ext_resource type="Script" uid="uid://cqdd377k18b4b" path="res://disappearing_wall.gd" id="14_tg8eb"]
 [ext_resource type="PackedScene" uid="uid://yeaf4aos4114" path="res://portal.tscn" id="15_n1lur"]
-[ext_resource type="Script" path="res://portal2.gd" id="16_b4b6e"]
-[ext_resource type="Script" path="res://win_popup.gd" id="17_b4b6e"]
-[ext_resource type="Script" path="res://button3.gd" id="17_sdads"]
+[ext_resource type="Script" uid="uid://yux53edo25rn" path="res://portal2.gd" id="16_b4b6e"]
+[ext_resource type="Script" uid="uid://dh72fmce1hypg" path="res://win_popup.gd" id="17_b4b6e"]
+[ext_resource type="Script" uid="uid://r3215fylbkcb" path="res://button3.gd" id="17_sdads"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -861,11 +861,11 @@ text = "Main Menu"
 script = ExtResource("17_sdads")
 
 [node name="DisappearingWall" type="Area2D" parent="."]
-position = Vector2(4243, 83)
+position = Vector2(4240, 81)
 script = ExtResource("14_tg8eb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DisappearingWall"]
-position = Vector2(78, -22)
+position = Vector2(80, -19)
 shape = SubResource("CapsuleShape2D_5hbhu")
 
 [node name="spawn point" type="Marker2D" parent="." node_paths=PackedStringArray("spawn_point")]
