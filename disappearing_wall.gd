@@ -11,4 +11,6 @@ func _on_fruit_count_updated(new_count: int) -> void:
 	if new_count >= 50:
 		collision_shape.disabled = true  # Disables the collision
 		self.visible = false             # Hides the wall (optional)
-		set_process(false)               # Stops checking once the condition is met
+		set_process(false)  
+		
+			 # Stops checking once the condition is met
