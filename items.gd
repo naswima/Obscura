@@ -4,9 +4,8 @@ extends Node2D
 
 func _ready() -> void:
 	$AnimatedSprite2D.play(fruitname)
-	
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"): 
+func _on_Area2D_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
 		body.pickedupitems += 1
 		queue_free()
