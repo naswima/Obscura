@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b376bl6k874w6" path="res://level 2.tscn" id="10_eqrsh"]
 [ext_resource type="AudioStream" uid="uid://dt5y7ik4gs0ky" path="res://bgm_action_4.mp3" id="11_n8vhr"]
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="12_hx44q"]
-[ext_resource type="Script" uid="uid://c5wk87w1nfsus" path="res://button.gd" id="14_eqrsh"]
+[ext_resource type="Script" path="res://button.gd" id="14_eqrsh"]
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="15_3l65w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3l65w"]
@@ -436,7 +436,7 @@ script = ExtResource("1_eqrsh")
 
 [node name="background" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(1225, -146)
+position = Vector2(1249, -141)
 scale = Vector2(2.49854, 1.582)
 texture = ExtResource("2_dopym")
 region_enabled = true
