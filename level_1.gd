@@ -29,7 +29,3 @@ func _on_OKButton_pressed():
 
 func _on_missing_fruits_popup_close_requested() -> void:
 	pass
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.

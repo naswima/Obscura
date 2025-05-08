@@ -823,6 +823,7 @@ position = Vector2(4428, 1)
 position = Vector2(4383, 96)
 script = ExtResource("16_b4b6e")
 fruitneeded = 51
+nextlevel = null
 
 [node name="checkpoint2" type="Sprite2D" parent="Portal2"]
 
