@@ -493,8 +493,8 @@ script = ExtResource("16_1idop")
 [node name="MessageLabel" type="Label" parent="Portal/MissingFruitsPopup"]
 offset_left = -1.0
 offset_top = 4.0
-offset_right = 1407.0
-offset_bottom = 88.0
+offset_right = 1420.0
+offset_bottom = 86.0
 theme = SubResource("Theme_n8vhr")
 theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 5
