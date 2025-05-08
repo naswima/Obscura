@@ -508,9 +508,12 @@ Looks like you're missing a few—go grab 'em and try again!"
 horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="Portal/MissingFruitsPopup"]
-offset_left = 997.0
+anchors_preset = -1
+anchor_left = 0.242
+anchor_right = 0.242
+offset_left = 652.634
 offset_top = 69.0
-offset_right = 1035.0
+offset_right = 690.634
 offset_bottom = 100.0
 theme = SubResource("Theme_eqrsh")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
