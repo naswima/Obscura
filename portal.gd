@@ -21,7 +21,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 
 	if body.is_in_group("player"):
-		if body.has_method("pickedupitems") and body.pickedupitems >= fruitneeded:
+		if "pickedupitems" in body and body.pickedupitems >= fruitneeded:
 			if nextlevel:
 				get_tree().change_scene_to_packed(nextlevel)
 			else:
