@@ -10,4 +10,3 @@ func _on_ok_button_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	pass # Replace with function body.
-	hide()
