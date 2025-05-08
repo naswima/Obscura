@@ -27,4 +27,7 @@ func _on_body_entered(body: Node2D) -> void:
 			else:
 				push_error("nextlevel is not a valid PackedScene!")
 		else:
-			missing_fruits_popup.popup_centered()
+			$MissingFruitsPopup.popup_centered()
+
+func _on_ok_button_pressed():
+	$MissingFruitsPopup.hide()
