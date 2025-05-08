@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sqsuw1hyfcaw" path="res://Free/Terrain/Terrain (16x16).png" id="2_ootpb"]
 [ext_resource type="Texture2D" uid="uid://bjakrtq6ii04x" path="res://Free/Traps/Spikes/Idle.png" id="3_ootpb"]
 [ext_resource type="PackedScene" uid="uid://oaltcldt7tcl" path="res://mr.frog.tscn" id="4_v38iq"]
-[ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://DeathZone.gd" id="5_v8kj3"]
+[ext_resource type="Script" path="res://area_2d.gd" id="5_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
 [ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_3l65w"]
 [ext_resource type="PackedScene" uid="uid://yeaf4aos4114" path="res://portal.tscn" id="9_n8vhr"]
@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://c5wk87w1nfsus" path="res://button.gd" id="14_eqrsh"]
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="15_3l65w"]
 [ext_resource type="Script" uid="uid://w8sngv1a2k6g" path="res://missing_fruits_popup.gd" id="16_1idop"]
-[ext_resource type="Script" uid="uid://bko5ogjctellq" path="res://button_2.gd" id="16_rjtee"]
+[ext_resource type="Script" path="res://button_2.gd" id="16_rjtee"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3l65w"]
 texture = ExtResource("2_ootpb")
