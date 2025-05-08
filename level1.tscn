@@ -491,16 +491,22 @@ theme = SubResource("Theme_3l65w")
 script = ExtResource("16_1idop")
 
 [node name="MessageLabel" type="Label" parent="Portal/MissingFruitsPopup"]
-offset_left = -1.0
-offset_top = 4.0
-offset_right = 1407.0
-offset_bottom = 86.0
+anchors_preset = -1
+anchor_left = 0.215
+anchor_top = 0.044
+anchor_right = 0.215
+anchor_bottom = 0.044
+offset_left = -0.300018
+offset_top = 0.0399997
+offset_right = 742.7
+offset_bottom = 85.3733
 theme = SubResource("Theme_n8vhr")
 theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 5
 theme_override_styles/normal = SubResource("StyleBoxFlat_n8vhr")
-text = "
- Uh oh! 🍓 You need all the fruits before you can go! Looks like you're missing a few—go grab 'em and try again!"
+text = "Uh oh! 🍓
+ You need all the fruits before you can go!
+ Looks like you're missing a few—go grab 'em and try again!"
 horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="Portal/MissingFruitsPopup"]
