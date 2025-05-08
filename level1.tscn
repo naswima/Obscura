@@ -477,6 +477,9 @@ nextlevel = ExtResource("10_eqrsh")
 position = Vector2(10, -7)
 texture = ExtResource("6_crycw")
 
+[node name="ActivationDelay" type="Timer" parent="Portal"]
+wait_time = 0.221
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_n8vhr")
 autoplay = true
@@ -621,7 +624,6 @@ position = Vector2(2483, 646)
 [node name="MissingFruitsPopup" type="Popup" parent="."]
 initial_position = 1
 size = Vector2i(1411, 90)
-visible = true
 theme = SubResource("Theme_3l65w")
 
 [node name="MessageLabel" type="Label" parent="MissingFruitsPopup"]
