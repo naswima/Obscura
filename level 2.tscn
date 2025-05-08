@@ -566,6 +566,42 @@ fruitname = "strawberry"
 position = Vector2(2843, 623)
 fruitname = "pineapple"
 
+[node name="items31" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(2923, 527)
+fruitname = "melon"
+
+[node name="items33" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(3567, 431)
+fruitname = "kiwi"
+
+[node name="items34" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(3712, 511)
+fruitname = "cherry"
+
+[node name="items35" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(3715, 351)
+fruitname = "orange"
+
+[node name="items36" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(3425, 351)
+fruitname = "cherry"
+
+[node name="items37" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(3511, 173)
+fruitname = "apple"
+
+[node name="items38" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(3630, 176)
+fruitname = "kiwi"
+
+[node name="items39" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(3569, 111)
+fruitname = "pineapple"
+
+[node name="items32" parent="." instance=ExtResource("9_ap4fx")]
+position = Vector2(2923, 367)
+fruitname = "strawberry"
+
 [node name="items28" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(2842, 511)
 fruitname = "melon"
