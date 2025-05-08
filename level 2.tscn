@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=38 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
@@ -15,6 +15,10 @@
 [ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="12_a1o74"]
 [ext_resource type="Script" uid="uid://ch37xpoj5yk3e" path="res://spawn_point_2.gd" id="12_kd0jg"]
 [ext_resource type="Script" uid="uid://cqdd377k18b4b" path="res://disappearing_wall.gd" id="14_tg8eb"]
+[ext_resource type="PackedScene" uid="uid://yeaf4aos4114" path="res://portal.tscn" id="15_n1lur"]
+[ext_resource type="Script" uid="uid://yux53edo25rn" path="res://portal2.gd" id="16_b4b6e"]
+[ext_resource type="Script" uid="uid://dh72fmce1hypg" path="res://win_popup.gd" id="17_b4b6e"]
+[ext_resource type="Script" uid="uid://r3215fylbkcb" path="res://button3.gd" id="17_sdads"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -438,9 +442,28 @@ size = Vector2(109, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21y4i"]
 size = Vector2(1731.49, 21)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tg8eb"]
-radius = 8.0
-height = 138.0
+[sub_resource type="Theme" id="Theme_g8n8q"]
+default_font = ExtResource("5_tfy05")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0oew"]
+bg_color = Color(0.921569, 0.745098, 0.94902, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id="Theme_00c7d"]
+default_font = ExtResource("5_tfy05")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo2la"]
+bg_color = Color(0.878431, 0.6, 0.921569, 0.658824)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hbhu"]
+height = 126.0
 
 [node name="level 2" type="Node2D"]
 script = ExtResource("1_mhe28")
@@ -800,14 +823,66 @@ fruitname = "melon"
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(4428, 1)
 
+[node name="Portal2" parent="." instance=ExtResource("15_n1lur")]
+position = Vector2(4383, 96)
+script = ExtResource("16_b4b6e")
+fruitneeded = 51
+
+[node name="checkpoint2" type="Sprite2D" parent="Portal2"]
+
+[node name="WinPopup" type="Popup" parent="Portal2"]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(746, 100)
+visible = true
+script = ExtResource("17_b4b6e")
+
+[node name="WinText" type="Label" parent="Portal2/WinPopup"]
+offset_left = 37.0
+offset_top = 5.0
+offset_right = 470.0
+offset_bottom = 80.0
+theme = SubResource("Theme_g8n8q")
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_styles/normal = SubResource("StyleBoxFlat_x0oew")
+text = "Woohoo! 
+You picked every last fruity treat—so proud of you! 🍓🍊
+You win!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Portal2/WinPopup"]
+anchors_preset = -1
+anchor_left = 0.909
+anchor_top = 0.595
+anchor_right = 0.909
+anchor_bottom = 0.595
+offset_left = -61.114
+offset_top = -15.5
+offset_right = 60.886
+offset_bottom = 15.5
+theme = SubResource("Theme_00c7d")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_bo2la")
+action_mode = 0
+text = "Main Menu"
+script = ExtResource("17_sdads")
+
 [node name="DisappearingWall" type="Area2D" parent="."]
+position = Vector2(4243, 83)
 script = ExtResource("14_tg8eb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DisappearingWall"]
-position = Vector2(4321, 61)
-shape = SubResource("CapsuleShape2D_tg8eb")
+position = Vector2(78, -22)
+shape = SubResource("CapsuleShape2D_5hbhu")
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="popup_hide" from="Portal2/WinPopup" to="." method="_on_win_popup_popup_hide"]
+[connection signal="pressed" from="Portal2/WinPopup/Button" to="." method="_on_button_pressed"]

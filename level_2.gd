@@ -11,11 +11,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_entered = true
 		print("Item picked up!")
-	
-
 
 func _on_area_2d_3_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.is_in_group("player") and player_entered:
+		$WinPopup.show()
 
 @onready var music_player = $AudioStreamPlayer
 
@@ -25,3 +24,6 @@ func _ready():
 			music_stream.loop = true
 			music_player.stream = music_stream
 			music_player.play()
+
+func _on_win_popup_popup_hide() -> void:
+	pass # Replace with function body.
