@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="5_tfy05"]
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="5_tg8eb"]
 [ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_26ho8"]
-[ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://area_2d.gd" id="8_6phv7"]
+[ext_resource type="Script" uid="uid://bme20o0mlsds5" path="res://DeathZone.gd" id="8_6phv7"]
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="9_ap4fx"]
 [ext_resource type="Script" uid="uid://bqmcs66vxy340" path="res://area_2d_2.gd" id="11_ais5g"]
 [ext_resource type="Script" uid="uid://cebped8t4cssr" path="res://area_2d_3.gd" id="12_a1o74"]

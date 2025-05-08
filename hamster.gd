@@ -24,12 +24,14 @@ func _on_animation_finished() -> void:
 	if animated_sprite.animation == "attack":
 		is_attacking = false
 
-func _on_death_zone_body_entered(body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		die()
 
 func _physics_process(delta: float) -> void:
 	var direction := Vector2.ZERO
+	if velocity == Vector2.ZERO:
+		print("Player velocity is zero.")
 
 	if not is_attacking:
 		if Input.is_action_pressed("ui_right"):
@@ -55,9 +57,18 @@ func _ready():
 	add_to_group("player")
 
 func die():
+	print("Player died!")
+	visible = false
+	animated_sprite.stop()
 	respawn()
 	velocity = Vector2.ZERO
+	visible = true
+	animated_sprite.play("default")
 
 func respawn():
 	if spawn_point:
 		global_position = spawn_point.global_position
+		velocity = Vector2.ZERO
+		move_and_slide()
+	else:
+		print("No spawn point set!")

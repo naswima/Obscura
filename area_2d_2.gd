@@ -1,12 +1,8 @@
 extends Area2D
 
-@onready var player: Node2D = get_node("/root/Scene/Player")  # Adjust path to the player node
+func _ready() -> void:
+	connect("body_entered", Callable(self, "_on_body_entered"))
 
-func _ready():
-	# Connect the body_entered signal to handle collisions
-	body_entered.connect(_on_body_entered)
-
-func _on_body_entered(body: Node2D):
-	# Check if the overlapping body is in the "player" group
-	if body.is_in_group("player"):
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") and body.has_method("respawn"):
 		body.respawn()
