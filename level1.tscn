@@ -658,6 +658,6 @@ text = "OK"
 script = ExtResource("14_eqrsh")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="close_requested" from="MissingFruitsPopup" to="." method="_on_missing_fruits_popup_close_requested"]
 [connection signal="pressed" from="MissingFruitsPopup/Button" to="." method="_on_button_pressed"]

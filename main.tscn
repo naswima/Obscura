@@ -200,7 +200,6 @@ shadow_offset = Vector2(0, 3)
 default_font = ExtResource("4_7mycd")
 
 [node name="StartPage" type="Node2D"]
-position = Vector2(0, 1)
 script = ExtResource("1_272bh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
