@@ -811,7 +811,7 @@ fruitname = "melon"
 [node name="AcceptDialog" type="AcceptDialog" parent="CanvasLayer2"]
 
 [node name="Portal2" parent="." instance=ExtResource("15_n1lur")]
-position = Vector2(4377, 97)
+position = Vector2(4377, 95)
 script = ExtResource("16_b4b6e")
 fruitneeded = 51
 nextlevel = null

@@ -14,7 +14,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if player:
-		if player.pickedupitems >= 2:
+		if player.pickedupitems >= 50:
 			queue_free()
 
 func _on_fruit_count_updated(new_count: int) -> void:
