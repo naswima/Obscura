@@ -9,7 +9,8 @@ extends Area2D
 var player_entered = false  # Flag to check if player entered portal after collecting fruits
 
 func _ready():
-	win_popup.hide()  # Make sure WinPopup is hidden when the scene starts
+	win_popup.hide()
+	connect("body_entered", Callable(self, "_on_body_entered")) # Make sure WinPopup is hidden when the scene starts
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

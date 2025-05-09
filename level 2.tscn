@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=42 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
@@ -17,8 +17,10 @@
 [ext_resource type="Script" uid="uid://cqdd377k18b4b" path="res://disappearing_wall.gd" id="14_tg8eb"]
 [ext_resource type="PackedScene" uid="uid://yeaf4aos4114" path="res://portal.tscn" id="15_n1lur"]
 [ext_resource type="Script" uid="uid://yux53edo25rn" path="res://portal2.gd" id="16_b4b6e"]
-[ext_resource type="Script" uid="uid://dh72fmce1hypg" path="res://win_popup.gd" id="17_b4b6e"]
-[ext_resource type="Script" uid="uid://r3215fylbkcb" path="res://button3.gd" id="17_sdads"]
+[ext_resource type="Script" path="res://win_popup.gd" id="17_b4b6e"]
+[ext_resource type="Script" path="res://button3.gd" id="17_sdads"]
+[ext_resource type="Script" uid="uid://cchcs7aoeqs3k" path="res://popup.gd" id="19_sdads"]
+[ext_resource type="Script" uid="uid://begr3dpcr05fe" path="res://label.gd" id="20_g8n8q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -465,6 +467,11 @@ corner_radius_bottom_left = 6
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hbhu"]
 height = 126.0
 
+[sub_resource type="Theme" id="Theme_bo2la"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hbhu"]
+bg_color = Color(0.937255, 0.388235, 0.537255, 1)
+
 [node name="level 2" type="Node2D"]
 script = ExtResource("1_mhe28")
 
@@ -811,7 +818,7 @@ fruitname = "melon"
 [node name="AcceptDialog" type="AcceptDialog" parent="CanvasLayer2"]
 
 [node name="Portal2" parent="." instance=ExtResource("15_n1lur")]
-position = Vector2(4377, 97)
+position = Vector2(4377, 95)
 script = ExtResource("16_b4b6e")
 fruitneeded = 51
 nextlevel = null
@@ -876,6 +883,34 @@ shape = SubResource("CapsuleShape2D_5hbhu")
 position = Vector2(79, -18)
 shape = SubResource("CapsuleShape2D_5hbhu")
 
+[node name="MissingFruitsPopup" type="Popup" parent="DisappearingWall"]
+title = "MissingFruitsPopup"
+initial_position = 1
+size = Vector2i(750, 100)
+visible = true
+max_size = Vector2i(3000, 2000)
+script = ExtResource("19_sdads")
+
+[node name="Label" type="Label" parent="DisappearingWall/MissingFruitsPopup"]
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.075
+anchor_right = 0.284
+anchor_bottom = 0.075
+offset_left = -216.0
+offset_top = -6.5
+offset_right = 535.0
+offset_bottom = 93.5
+theme = SubResource("Theme_bo2la")
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 5
+theme_override_styles/normal = SubResource("StyleBoxFlat_5hbhu")
+text = "Uh oh! 🍓
+You need all the fruits before you can go!
+Looks like you're missing a few—go grab 'em and try again!"
+horizontal_alignment = 1
+script = ExtResource("20_g8n8q")
+
 [node name="spawn point" type="Marker2D" parent="."]
 position = Vector2(44, 494)
 script = ExtResource("10_sdads")
@@ -886,3 +921,4 @@ script = ExtResource("10_sdads")
 [connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
 [connection signal="popup_hide" from="Portal2/WinPopup" to="." method="_on_win_popup_popup_hide"]
 [connection signal="pressed" from="Portal2/WinPopup/Button" to="." method="_on_button_pressed"]
+[connection signal="body_entered" from="DisappearingWall" to="DisappearingWall" method="_on_body_entered"]
