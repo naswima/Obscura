@@ -634,11 +634,11 @@ position = Vector2(1682, 415)
 fruitname = "orange"
 
 [node name="items19" parent="items" instance=ExtResource("12_hx44q")]
-position = Vector2(2075, 100)
+position = Vector2(2075, 83)
 fruitname = "orange"
 
 [node name="items20" parent="items" instance=ExtResource("12_hx44q")]
-position = Vector2(1777, 134)
+position = Vector2(1777, 111)
 fruitname = "orange"
 
 [node name="items10" parent="items" instance=ExtResource("12_hx44q")]
