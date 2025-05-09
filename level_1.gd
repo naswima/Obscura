@@ -4,8 +4,6 @@ extends Node2D
 @onready var player_entered: bool = false
 @onready var strawberry_picked: int = 0
 
-@onready var music_player = $AudioStreamPlayer
-
 func _ready() -> void:
 	print(strawberry_sprite)
 	
