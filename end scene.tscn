@@ -7,11 +7,13 @@
 default_font = ExtResource("2_ym13g")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfdi6"]
-bg_color = Color(0.913725, 0.501961, 0.560784, 0.65098)
+bg_color = Color(0.976857, 0.720856, 0.795663, 0.733333)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
+shadow_color = Color(0.414066, 0.414066, 0.414066, 0.6)
+shadow_size = 7
 
 [node name="Node2D" type="Node2D"]
 
