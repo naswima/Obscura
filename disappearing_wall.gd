@@ -21,4 +21,4 @@ func _on_body_entered(body):
 		if "pickedupitems" in body and body.pickedupitems < fruitneeded:
 			missing_fruits_popup.popup_centered()
 		else:
-			get_tree().change_scene_to_file("res://main.tscn")
+			get_tree().change_scene_to_file("res://end scene.tscn")
