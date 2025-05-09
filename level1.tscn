@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dj75ky4xyej44" path="res://Free/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="6_crycw"]
 [ext_resource type="Script" uid="uid://bb7852dbfx4ed" path="res://camera_2d.gd" id="7_3l65w"]
 [ext_resource type="PackedScene" uid="uid://yeaf4aos4114" path="res://portal.tscn" id="9_n8vhr"]
-[ext_resource type="AudioStream" uid="uid://dt5y7ik4gs0ky" path="res://bgm_action_4.mp3" id="11_n8vhr"]
 [ext_resource type="Script" uid="uid://b1yksb50j82cw" path="res://spawn_point.gd" id="12_3l65w"]
 [ext_resource type="PackedScene" uid="uid://hjeam38xefbl" path="res://items.tscn" id="12_hx44q"]
+[ext_resource type="AudioStream" uid="uid://cfhorxc1pa7fl" path="res://elevator-to-heaven-aaron-paul-low-main-version-21242-01-42.mp3" id="13_rjtee"]
 [ext_resource type="Script" uid="uid://c5wk87w1nfsus" path="res://button.gd" id="14_eqrsh"]
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="15_3l65w"]
 [ext_resource type="Script" uid="uid://w8sngv1a2k6g" path="res://missing_fruits_popup.gd" id="16_1idop"]
@@ -524,7 +524,7 @@ text = "OK"
 script = ExtResource("16_rjtee")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_n8vhr")
+stream = ExtResource("13_rjtee")
 autoplay = true
 
 [node name="items" type="Node2D" parent="."]
@@ -550,7 +550,7 @@ position = Vector2(799, 255)
 fruitname = "melon"
 
 [node name="items6" parent="items" instance=ExtResource("12_hx44q")]
-position = Vector2(659, 419)
+position = Vector2(660, 390)
 fruitname = "orange"
 
 [node name="items8" parent="items" instance=ExtResource("12_hx44q")]
@@ -634,11 +634,11 @@ position = Vector2(1682, 415)
 fruitname = "orange"
 
 [node name="items19" parent="items" instance=ExtResource("12_hx44q")]
-position = Vector2(2075, 100)
+position = Vector2(2075, 83)
 fruitname = "orange"
 
 [node name="items20" parent="items" instance=ExtResource("12_hx44q")]
-position = Vector2(1777, 134)
+position = Vector2(1777, 111)
 fruitname = "orange"
 
 [node name="items10" parent="items" instance=ExtResource("12_hx44q")]
