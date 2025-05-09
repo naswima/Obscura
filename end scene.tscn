@@ -1,15 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://56oq7m4nxgx7"]
+[gd_scene load_steps=8 format=3 uid="uid://56oq7m4nxgx7"]
 
 [ext_resource type="Script" uid="uid://ckixoa00kxpxm" path="res://end_scene.gd" id="1_4f0k0"]
 [ext_resource type="Texture2D" uid="uid://curem31aje3ud" path="res://WIN!!!.jpg" id="1_wp334"]
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="2_ym13g"]
 [ext_resource type="Script" uid="uid://5ogc2qfd52if" path="res://button5.gd" id="3_ym13g"]
+[ext_resource type="AudioStream" uid="uid://ddioy7ekvqkw6" path="res://ELEVATOR (LOOP).mp3" id="5_rfdi6"]
 
 [sub_resource type="Theme" id="Theme_4f0k0"]
 default_font = ExtResource("2_ym13g")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfdi6"]
-bg_color = Color(0.976857, 0.720856, 0.795663, 0.733333)
+bg_color = Color(0.992157, 0.568627, 0.619608, 0.643137)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -36,5 +37,11 @@ theme_override_colors/font_color = Color(0.988957, 0.988957, 0.988957, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_rfdi6")
 text = "Main Menu"
 script = ExtResource("3_ym13g")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rfdi6")
+volume_db = 0.459
+pitch_scale = 1.29
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

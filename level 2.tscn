@@ -635,7 +635,7 @@ position = Vector2(1075, 559)
 fruitname = "orange"
 
 [node name="items13" parent="." instance=ExtResource("9_ap4fx")]
-position = Vector2(1243, 538)
+position = Vector2(1242, 505)
 fruitname = "cherry"
 
 [node name="items14" parent="." instance=ExtResource("9_ap4fx")]
@@ -658,7 +658,7 @@ position = Vector2(2373, 591)
 fruitname = "orange"
 
 [node name="items25" parent="." instance=ExtResource("9_ap4fx")]
-position = Vector2(2752, 578)
+position = Vector2(2688, 623)
 fruitname = "strawberry"
 
 [node name="items26" parent="." instance=ExtResource("9_ap4fx")]
