@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var fruitneeded := 51
+@export var fruitneeded := 50
 @export var nextlevel: PackedScene
 
 @onready var win_popup: Popup = $WinPopup  # This will refer to the WinPopup

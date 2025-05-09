@@ -715,10 +715,6 @@ fruitname = "melon"
 position = Vector2(3715, 351)
 fruitname = "orange"
 
-[node name="items41" parent="." instance=ExtResource("9_ap4fx")]
-position = Vector2(4370, 90)
-fruitname = "trophy"
-
 [node name="items36" parent="." instance=ExtResource("9_ap4fx")]
 position = Vector2(3425, 351)
 fruitname = "cherry"
@@ -823,9 +819,9 @@ fruitname = "melon"
 [node name="AcceptDialog" type="AcceptDialog" parent="CanvasLayer2"]
 
 [node name="Portal2" parent="." instance=ExtResource("15_n1lur")]
-position = Vector2(4377, 95)
+position = Vector2(4338, 97)
 script = ExtResource("16_b4b6e")
-fruitneeded = 51
+fruitneeded = 50
 nextlevel = null
 
 [node name="checkpoint2" type="Sprite2D" parent="Portal2"]
