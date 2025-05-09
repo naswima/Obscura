@@ -27,6 +27,4 @@ func _on_portal_area_body_entered(body: Node2D) -> void:
 		win_popup.popup_centered()  # Show the WinPopup when the player enters the portal
 		# Optionally, you can add a button in the popup to move to the next level:
 		if nextlevel:
-			# You could trigger scene transition after the popup, e.g., with a delay or button press
-			print("Transitioning to the next level.")
-			get_tree().change_scene_to_packed(nextlevel)  # Change to the next level
+			get_tree().change_scene_to_file("res://end scene.tscn")

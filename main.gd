@@ -32,3 +32,7 @@ func process(delta):
 
 var player_health = 100
 var player
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	pass

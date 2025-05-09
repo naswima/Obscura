@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://h40g18lo8wot"]
+[gd_scene load_steps=7 format=3 uid="uid://56oq7m4nxgx7"]
 
+[ext_resource type="Script" uid="uid://ckixoa00kxpxm" path="res://end_scene.gd" id="1_4f0k0"]
 [ext_resource type="Texture2D" uid="uid://curem31aje3ud" path="res://WIN!!!.jpg" id="1_wp334"]
 [ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="2_ym13g"]
+[ext_resource type="Script" uid="uid://5ogc2qfd52if" path="res://button5.gd" id="3_ym13g"]
 
 [sub_resource type="Theme" id="Theme_4f0k0"]
 default_font = ExtResource("2_ym13g")
@@ -15,7 +17,8 @@ corner_radius_bottom_left = 6
 shadow_color = Color(0.414066, 0.414066, 0.414066, 0.6)
 shadow_size = 7
 
-[node name="Node2D" type="Node2D"]
+[node name="Node 2D" type="Node2D"]
+script = ExtResource("1_4f0k0")
 
 [node name="Win!!!" type="Sprite2D" parent="."]
 position = Vector2(576, 321.5)
@@ -32,3 +35,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.988957, 0.988957, 0.988957, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_rfdi6")
 text = "Main Menu"
+script = ExtResource("3_ym13g")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

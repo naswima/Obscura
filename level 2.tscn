@@ -834,10 +834,10 @@ nextlevel = null
 transparent_bg = true
 initial_position = 1
 size = Vector2i(754, 100)
-visible = true
 script = ExtResource("17_b4b6e")
 
 [node name="WinText" type="Label" parent="Portal2/WinPopup"]
+visible = false
 offset_left = 37.0
 offset_top = 5.0
 offset_right = 470.0
@@ -852,6 +852,7 @@ You win!"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Portal2/WinPopup"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.909
 anchor_top = 0.595
