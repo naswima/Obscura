@@ -31,9 +31,3 @@ func _ready():
 
 func _on_win_popup_popup_hide() -> void:
 	pass # Replace with function body.
-	
-func _on_OKButton_pressed():
-	$MissingFruitsPopup.hide()
-	
-func _on_missing_fruits_popup_close_requested() -> void:
-	pass
