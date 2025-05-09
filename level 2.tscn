@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://b376bl6k874w6"]
+[gd_scene load_steps=43 format=4 uid="uid://b376bl6k874w6"]
 
 [ext_resource type="Texture2D" uid="uid://c01cwa4l8sndr" path="res://Free/Background/Pink.png" id="1_cxgt8"]
 [ext_resource type="Script" uid="uid://bb66hsg8jv2a2" path="res://level_2.gd" id="1_mhe28"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://r3215fylbkcb" path="res://button3.gd" id="17_sdads"]
 [ext_resource type="Script" uid="uid://cchcs7aoeqs3k" path="res://popup.gd" id="19_sdads"]
 [ext_resource type="Script" uid="uid://begr3dpcr05fe" path="res://label.gd" id="20_g8n8q"]
+[ext_resource type="Script" uid="uid://cuf7nqx06sj70" path="res://button4.gd" id="21_x0oew"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
@@ -890,6 +891,7 @@ position = Vector2(79, -18)
 shape = SubResource("CapsuleShape2D_5hbhu")
 
 [node name="MissingFruitsPopup" type="Popup" parent="DisappearingWall"]
+transparent_bg = true
 title = "MissingFruitsPopup"
 initial_position = 1
 size = Vector2i(750, 105)
@@ -918,6 +920,19 @@ Looks like you're missing a few—go grab 'em and try again!
 "
 horizontal_alignment = 1
 script = ExtResource("20_g8n8q")
+
+[node name="Button" type="Button" parent="DisappearingWall/MissingFruitsPopup"]
+anchors_preset = -1
+anchor_left = 0.944
+anchor_top = 0.048
+anchor_right = 0.944
+anchor_bottom = 0.048
+offset_left = -6.10352e-05
+offset_top = -0.04
+offset_right = 30.9999
+offset_bottom = 30.96
+text = "OK"
+script = ExtResource("21_x0oew")
 
 [node name="spawn point" type="Marker2D" parent="."]
 position = Vector2(44, 494)
