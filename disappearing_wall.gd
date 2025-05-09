@@ -1,26 +1,23 @@
-extends Area2D  # Not Area2D — use StaticBody2D to *block movement*
+extends Area2D
 
 @onready var collision_shape = $CollisionShape2D
-@onready var sprite: Sprite2D = $Sprite2D  # Optional, if you want to hide it visually too
-@onready var player: CharacterBody2D = $"../mr_ frog"
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var player: CharacterBody2D = get_node_or_null("/root/level2/mr_frog")
+@onready var missing_fruits_popup: Popup = $MissingFruitsPopup
+
+@export var fruitneeded := 2
 
 func _ready():
-	player = get_node_or_null("/root/level2/mr_frog")
-	if player:
-		player.fruit_count_updated.connect(_on_fruit_count_updated)
-		_on_fruit_count_updated(player.fruit_count)  # check immediately in case count is already 50+
-	else:
-		print("Player not found!")
+	missing_fruits_popup.hide()
+	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _process(delta: float) -> void:
-	if player:
-		if player.pickedupitems >= 50:
-			queue_free()
+	if player and player.pickedupitems >= 2:
+		queue_free()
 
-func _on_fruit_count_updated(new_count: int) -> void:
-	if new_count >= 50:
-		collision_shape.disabled = true
-		if sprite:
-			sprite.visible = false
-	else:
-		collision_shape.disabled = false  # <-- This line ensures it's blocking when under 50
+func _on_body_entered(body):
+	if body.is_in_group("player"):
+		if body.pickedupitems < fruitneeded:
+			missing_fruits_popup.popup_centered()
+		else:
+			get_tree().change_scene_to_file("res://main.tscn")
