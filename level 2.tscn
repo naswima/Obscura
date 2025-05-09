@@ -890,7 +890,6 @@ position = Vector2(79, -18)
 shape = SubResource("CapsuleShape2D_5hbhu")
 
 [node name="MissingFruitsPopup" type="Popup" parent="DisappearingWall"]
-transparent_bg = true
 title = "MissingFruitsPopup"
 initial_position = 1
 size = Vector2i(750, 126)
