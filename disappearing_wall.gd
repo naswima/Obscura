@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body):
 	print("Body entered:", body)
 	if body.is_in_group("player"):
-		if body.pickedupitems < fruitneeded:
+		if "pickedupitems" in body and body.pickedupitems < fruitneeded:
 			missing_fruits_popup.popup_centered()
 		else:
 			get_tree().change_scene_to_file("res://main.tscn")
