@@ -21,6 +21,10 @@
 [ext_resource type="Script" uid="uid://r3215fylbkcb" path="res://button3.gd" id="17_sdads"]
 [ext_resource type="Script" uid="uid://cchcs7aoeqs3k" path="res://popup.gd" id="19_sdads"]
 [ext_resource type="Script" uid="uid://begr3dpcr05fe" path="res://label.gd" id="20_g8n8q"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Script" path="res://button4.gd" id="21_x0oew"]
+>>>>>>> parent of fb2bc04 (button)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("2_gvk67")
