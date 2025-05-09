@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://h40g18lo8wot"]
+
+[ext_resource type="Texture2D" uid="uid://curem31aje3ud" path="res://WIN!!!.jpg" id="1_wp334"]
+[ext_resource type="FontFile" uid="uid://cofpl56m0yo1n" path="res://04B_30__.TTF" id="2_ym13g"]
+
+[sub_resource type="Theme" id="Theme_4f0k0"]
+default_font = ExtResource("2_ym13g")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfdi6"]
+bg_color = Color(0.913725, 0.501961, 0.560784, 0.65098)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Win!!!" type="Sprite2D" parent="."]
+position = Vector2(576, 321.5)
+scale = Vector2(0.596875, 0.597222)
+texture = ExtResource("1_wp334")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 505.0
+offset_top = 441.0
+offset_right = 642.0
+offset_bottom = 515.0
+theme = SubResource("Theme_4f0k0")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.988957, 0.988957, 0.988957, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_rfdi6")
+text = "Main Menu"
